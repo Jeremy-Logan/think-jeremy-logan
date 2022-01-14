@@ -1,0 +1,57 @@
+{
+    "projectData": [
+        {
+            "section": "Websites",
+            "bgColor": "#f97316",
+            "projects": [
+                {
+                    "title": "Color Mill Design",
+                    "content": {
+                        "link": "https://www.colormilldesign.com/",
+                        "imageURL": "https://res.cloudinary.com/the-color-mill/image/upload/v1642124086/Color%20Mill%20Design/colorMillDesign_jxg4fi.jpg"
+                    }
+                },
+                {
+                    "title": "Mendocino Spirits",
+                    "content": {
+                        "link": "https://www.mendocinospirits.com/",
+                        "imageURL": "https://res.cloudinary.com/the-color-mill/image/upload/v1642122802/Color%20Mill%20Design/MS-Home-Page_fjiah5.jpg"
+                    }
+                },
+                {
+                    "title": "Newberger & Associates",
+                    "content": {
+                        "link": "https://www.lsndesign.com/",
+                        "imageURL": "https://res.cloudinary.com/the-color-mill/image/upload/v1641948361/Color%20Mill%20Design/newberger_nhbtwl.jpg"
+                    }
+                }
+            ]
+        },
+        {
+            "section": "Illustration",
+            "bgColor": "#ef4444",
+            "projects": [
+                {
+                    "title": "Boonville Betty",
+                    "content": {
+                        "link": " ",
+                        "imageURL": "https://res.cloudinary.com/the-color-mill/image/upload/v1641948871/Color%20Mill%20Design/Betty_Instagram_Not_transparent_bsqzvp.jpg"
+                    }
+                }
+            ]
+        },
+        {
+            "section": "Graphic Design",
+            "bgColor": "#ec4899",
+            "projects": [
+                {
+                    "title": "Mendocino Spirits Bottles",
+                    "content": {
+                        "link": " ",
+                        "imageURL": "https://res.cloudinary.com/the-color-mill/image/upload/v1638993398/Color%20Mill%20Design/4-Seasons_i5fakp.jpg"
+                    }
+                }
+            ]
+        }
+    ]
+}

@@ -2,7 +2,11 @@ import * as React from 'react';
 
 import Header from './Header';
 
-export default function Layout({ children }: { children: React.ReactNode }) {
+// interface Props {
+//     children: React.ReactNode;
+// }
+
+export default function Layout({ children }: LayoutProps) {
     return (
         <>
             <Header />
