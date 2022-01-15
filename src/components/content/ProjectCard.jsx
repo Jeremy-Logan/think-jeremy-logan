@@ -2,6 +2,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { useRef } from 'react';
 
+import ImageModal from '../content/ImageModal';
 import useOutsideClick from '../hooks/useOutsideClick';
 import useToggle from '../hooks/useToggle';
 
@@ -54,37 +55,48 @@ const ProjectCard = ({ props }) => {
                 </button>
                 <div className='flex z-0 flex-col justify-center my-12 sm:flex-row'>
                     {props.projects.map((project, i) => {
-                        return (
-                            <>
-                                <Link
-                                    href={project.content.link}
-                                    key={i}
-                                    passHref
+                        return project.content.link ? (
+                            <Link href={project.content.link} key={i} passHref>
+                                <a
+                                    target='_blank'
+                                    rel='noopener noreferrer'
+                                    className={`rounded-lg bg-white -skew-y-12  shadow-lg p-4 sm:p-[2vw] m-4 hover:scale-105 + ${
+                                        isOpen
+                                            ? 'transition  ease-in-out opacity-100 '
+                                            : 'transition delay-0 opacity-0 '
+                                    } `}
                                 >
-                                    <a
-                                        className={`rounded-lg bg-white -skew-y-12  shadow-lg p-4 sm:p-[2vw] m-4 hover:scale-105 + ${
+                                    <button
+                                        className={`relative w-[80vw] h-[80vw] sm:w-[20vw] sm:h-[20vw]  + ${
                                             isOpen
-                                                ? 'transition  ease-in-out opacity-100 '
-                                                : 'transition delay-0 opacity-0 '
-                                        } `}
+                                                ? 'transition delay-200 ease-in-out opacity-100 '
+                                                : 'transition delay-0 ease-in-out opacity-0 mt-0'
+                                        }`}
                                     >
-                                        <button
-                                            className={`relative w-[80vw] h-[80vw] sm:w-[20vw] sm:h-[20vw]  + ${
-                                                isOpen
-                                                    ? 'transition delay-200 ease-in-out opacity-100 '
-                                                    : 'transition delay-0 ease-in-out opacity-0 mt-0'
-                                            }`}
-                                        >
-                                            <Image
-                                                src={project.content.imageURL}
-                                                alt={project.title}
-                                                layout='fill'
-                                                objectFit='cover'
-                                            />
-                                        </button>
-                                    </a>
-                                </Link>
-                            </>
+                                        <Image
+                                            src={project.content.imageURL}
+                                            alt={project.title}
+                                            layout='fill'
+                                            objectFit='cover'
+                                        />
+                                    </button>
+                                </a>
+                            </Link>
+                        ) : (
+                            <div key={i}>
+                                <div
+                                    className={`rounded-lg bg-white -skew-y-12  shadow-lg p-4 sm:p-[2vw] m-4 hover:scale-105 + ${
+                                        isOpen
+                                            ? 'transition  ease-in-out opacity-100 '
+                                            : 'transition delay-0 opacity-0 '
+                                    } `}
+                                >
+                                    <ImageModal
+                                        project={project}
+                                        isOpen={isOpen}
+                                    />
+                                </div>
+                            </div>
                         );
                     })}
                 </div>

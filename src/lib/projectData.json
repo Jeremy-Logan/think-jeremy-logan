@@ -34,8 +34,19 @@
                 {
                     "title": "Boonville Betty",
                     "content": {
-                        "link": " ",
                         "imageURL": "https://res.cloudinary.com/the-color-mill/image/upload/v1641948871/Color%20Mill%20Design/Betty_Instagram_Not_transparent_bsqzvp.jpg"
+                    }
+                },
+                {
+                    "title": "Mendocino Spirits Dry Gin",
+                    "content": {
+                        "imageURL": "https://res.cloudinary.com/the-color-mill/image/upload/v1642285141/Color%20Mill%20Design/Dry-Gin-Label_tfr30h.jpg"
+                    }
+                },
+                {
+                    "title": "Memento Mori",
+                    "content": {
+                        "imageURL": "https://res.cloudinary.com/the-color-mill/image/upload/v1642285573/Color%20Mill%20Design/Memento_Mori_nnzpzd.jpg"
                     }
                 }
             ]
@@ -47,7 +58,6 @@
                 {
                     "title": "Mendocino Spirits Bottles",
                     "content": {
-                        "link": " ",
                         "imageURL": "https://res.cloudinary.com/the-color-mill/image/upload/v1638993398/Color%20Mill%20Design/4-Seasons_i5fakp.jpg"
                     }
                 }
