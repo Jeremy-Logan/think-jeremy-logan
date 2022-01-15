@@ -1,17 +1,35 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import { useRef } from 'react';
 
-import useOutsideClick from '../hooks/useOutsideClick';
-import useToggle from '../hooks/useToggle.js';
+import useToggle from '../hooks/useToggle';
+
+// export interface Welcome {
+//     projectData: ProjectDatum[];
+// }
+
+// export interface ProjectDatum {
+//     section:  string;
+//     bgColor:  string;
+//     projects: Project[];
+// }
+
+// export interface Project {
+//     title:   string;
+//     content: Content;
+// }
+
+// export interface Content {
+//     link:     string;
+//     imageURL: string;
+// }
 
 const ProjectCard = ({ props }) => {
-    const [isOpen, toggleIsOpen] = useToggle();
-    const ref = useRef();
+    const [isOpen, toggleIsOpen] = useToggle(false);
+    // const ref = useRef();
 
-    useOutsideClick(ref, () => {
-        if (isOpen) toggleIsOpen(false);
-    });
+    // useOutsideClick(ref, () => {
+    //     if (isOpen) toggleIsOpen(false);
+    // });
 
     // const coverImage = props.projects.filter(
     //     (project, i) => project && i === 0
@@ -20,7 +38,7 @@ const ProjectCard = ({ props }) => {
         <>
             <div
                 style={{ backgroundColor: `${props.bgColor}` }}
-                ref={ref}
+                // ref={ref}
                 className={` m-0 py-4 skew-y-12 + ${
                     isOpen
                         ? 'h-[140vh] sm:h-[70vh] transition-all duration-400 ease-in-out'
@@ -48,7 +66,6 @@ const ProjectCard = ({ props }) => {
                                                 : 'transition delay-0 opacity-0 '
                                         } `}
                                     >
-                                        {/* <div style={{ backgroundColor: `${props.bgColor}` }} className='h-[5vw] -m-[4vw] z-10 relative'></div> */}
                                         <button
                                             className={`relative w-[80vw] h-[80vw] sm:w-[20vw] sm:h-[20vw]  + ${
                                                 isOpen
@@ -63,7 +80,6 @@ const ProjectCard = ({ props }) => {
                                                 objectFit='cover'
                                             />
                                         </button>
-                                        {/* <div style={{ backgroundColor: `${props.bgColor}` }} className='h-[6vw] -m-[4vw] z-10 relative'></div> */}
                                     </a>
                                 </Link>
                             </>
