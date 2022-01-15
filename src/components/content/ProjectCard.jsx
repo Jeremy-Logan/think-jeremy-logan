@@ -1,6 +1,8 @@
 import Image from 'next/image';
 import Link from 'next/link';
+import { useRef } from 'react';
 
+import useOutsideClick from '../hooks/useOutsideClick';
 import useToggle from '../hooks/useToggle';
 
 // export interface Welcome {
@@ -25,11 +27,11 @@ import useToggle from '../hooks/useToggle';
 
 const ProjectCard = ({ props }) => {
     const [isOpen, toggleIsOpen] = useToggle(false);
-    // const ref = useRef();
+    const ref = useRef();
 
-    // useOutsideClick(ref, () => {
-    //     if (isOpen) toggleIsOpen(false);
-    // });
+    useOutsideClick(ref, () => {
+        if (isOpen) toggleIsOpen(false);
+    });
 
     // const coverImage = props.projects.filter(
     //     (project, i) => project && i === 0
@@ -38,7 +40,7 @@ const ProjectCard = ({ props }) => {
         <>
             <div
                 style={{ backgroundColor: `${props.bgColor}` }}
-                // ref={ref}
+                ref={ref}
                 className={` m-0 py-4 skew-y-12 + ${
                     isOpen
                         ? 'h-[140vh] sm:h-[70vh] transition-all duration-400 ease-in-out'
