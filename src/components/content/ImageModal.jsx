@@ -59,7 +59,7 @@ const ImageModal = ({ project }, isOpen) => {
                             leaveFrom='opacity-100 translate-y-0 sm:scale-100'
                             leaveTo='opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95'
                         >
-                            <div className='inline-block overflow-hidden z-50 px-4 pt-5 pb-4 text-left align-bottom bg-white rounded-lg shadow-xl transition-all transform sm:p-6 sm:pb-12 sm:mt-36 sm:w-full sm:max-w-4xl sm:align-middle'>
+                            <div className='inline-block overflow-hidden z-50 px-4 pt-5 pb-4 my-auto w-full text-left bg-white rounded-lg shadow-xl transition-all transform sm:p-6 sm:pb-12 sm:mt-36 sm:w-full sm:max-w-4xl sm:align-middle'>
                                 <div>
                                     <button
                                         onClick={() => setOpenModal(false)}
@@ -70,7 +70,7 @@ const ImageModal = ({ project }, isOpen) => {
                                             aria-hidden='true'
                                         />
                                     </button>
-                                    <div className='h-[35vw] w-[35vw] relative mx-auto'>
+                                    <div className='h-[80vw] w-[80vw] relative mx-auto xl:h-[55vw] xl:w-[55vw] 2xl:h-[35vw] 2xl:w-[35vw]'>
                                         <Image
                                             src={project.content.imageURL}
                                             alt={project.title}
