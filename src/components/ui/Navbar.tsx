@@ -9,7 +9,7 @@ export default function Navbar() {
             <div className='px-2 mx-auto w-screen shadow sm:px-24'>
                 <div className='flex items-center h-auto'>
                     <div className='flex justify-center items-center w-full sm:justify-start'>
-                        <div className='m-8 w-24 h-24 cursor-pointer'>
+                        <div className='m-8 w-12 h-12 cursor-pointer sm:w-24 sm:h-24'>
                             <Link href='/' passHref>
                                 <a>
                                     <NextImage

@@ -7,7 +7,7 @@ const ProjectSection = () => {
     return (
         <>
             {' '}
-            <div className='mt-24 mb-60 h-full'>
+            <div className='z-0 mt-24 mb-60 h-full'>
                 {projects.projectData.map((data, i) => {
                     return <ProjectCard key={i} props={data} />;
                 })}
