@@ -1,9 +1,9 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import { useRef } from 'react';
 
+// import { useRef } from 'react';
 import ImageModal from '../content/ImageModal';
-import useOutsideClick from '../hooks/useOutsideClick';
+// import useOutsideClick from '../hooks/useOutsideClick';
 import useToggle from '../hooks/useToggle';
 
 // export interface Welcome {
@@ -28,11 +28,11 @@ import useToggle from '../hooks/useToggle';
 
 const ProjectCard = ({ props }) => {
     const [isOpen, toggleIsOpen] = useToggle(false);
-    const ref = useRef();
+    // const ref = useRef();
 
-    useOutsideClick(ref, () => {
-        if (isOpen) toggleIsOpen(false);
-    });
+    // useOutsideClick(ref, () => {
+    //     if (isOpen) toggleIsOpen(false);
+    // });
 
     return (
         <>
@@ -53,7 +53,7 @@ const ProjectCard = ({ props }) => {
                 <div
                     className={`flex z-0 flex-col justify-center my-12 sm:flex-row + ${
                         isOpen
-                            ? 'transition ease-in-out block opacity-100'
+                            ? 'transition ease-in-out opacity-100'
                             : 'transition delay-0 opacity-0'
                     }`}
                 >
@@ -65,8 +65,8 @@ const ProjectCard = ({ props }) => {
                                     rel='noopener noreferrer'
                                     className={`rounded-lg bg-white -skew-y-12  shadow-lg p-4 sm:p-[2vw] m-4 hover:scale-105 + ${
                                         isOpen
-                                            ? 'transition delay-100 ease-in-out opacity-100 '
-                                            : 'transition delay-0 opacity-0 '
+                                            ? 'transition delay-100 ease-in-out opacity-100 pointer-events-auto'
+                                            : 'transition delay-0 opacity-0 pointer-events-none'
                                     } `}
                                 >
                                     <button
@@ -90,8 +90,8 @@ const ProjectCard = ({ props }) => {
                                 <div
                                     className={`rounded-lg bg-white -skew-y-12  shadow-lg p-4 sm:p-[2vw] m-4 hover:scale-105 z-0 + ${
                                         isOpen
-                                            ? 'transition  ease-in-out opacity-100'
-                                            : 'transition delay-0 opacity-0'
+                                            ? 'transition delay-100 ease-in-out opacity-100 pointer-events-auto'
+                                            : 'transition delay-0 opacity-0 pointer-events-none'
                                     } `}
                                 >
                                     <ImageModal

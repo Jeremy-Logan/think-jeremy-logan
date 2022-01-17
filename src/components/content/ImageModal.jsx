@@ -8,10 +8,10 @@ const ImageModal = ({ project }, isOpen) => {
     return (
         <>
             <button
-                className={`relative w-[80vw] h-[80vw] sm:w-[20vw] sm:h-[20vw]  + ${
+                className={`relative w-[80vw] h-[80vw] sm:w-[20vw] sm:h-[20vw] z-0 + ${
                     isOpen
-                        ? 'transition delay-200 ease-in-out opacity-100 '
-                        : 'transition delay-0 ease-in-out opacity-0 mt-0'
+                        ? 'transition  delay-200 ease-in-out opacity-100 duration-150'
+                        : 'transition  delay-0 ease-in-out opacity-0'
                 }`}
                 onClick={() => {
                     setOpenModal(true);
