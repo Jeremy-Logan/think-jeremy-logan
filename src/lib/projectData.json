@@ -19,6 +19,13 @@
                     }
                 },
                 {
+                    "title": "Fort Bragg Food Bank",
+                    "content": {
+                        "link": "https://www.fortbraggfoodbank.org/",
+                        "imageURL": "https://res.cloudinary.com/the-color-mill/image/upload/v1643161542/Color%20Mill%20Design/foodBank_kguvam.jpg"
+                    }
+                },
+                {
                     "title": "Newberger & Associates",
                     "content": {
                         "link": "https://www.lsndesign.com/",
@@ -68,9 +75,9 @@
                     }
                 },
                 {
-                    "title": "Mendocino Spirits Bottles",
+                    "title": "Noyo Harbor Inn",
                     "content": {
-                        "imageURL": "https://res.cloudinary.com/the-color-mill/image/upload/v1638993398/Color%20Mill%20Design/4-Seasons_i5fakp.jpg"
+                        "imageURL": "https://res.cloudinary.com/the-color-mill/image/upload/v1643162096/Color%20Mill%20Design/NHI-Collateral_instagram_wmxuhl.jpg"
                     }
                 }
             ]

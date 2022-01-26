@@ -63,14 +63,14 @@ const ProjectCard = ({ props }) => {
                                 <a
                                     target='_blank'
                                     rel='noopener noreferrer'
-                                    className={`rounded-lg bg-white -skew-y-12  shadow-lg p-4 sm:p-[2vw] m-4 hover:scale-105 + ${
+                                    className={`rounded-lg bg-white -skew-y-12  shadow-lg p-4 sm:p-[2vw] m-4 sm:m-2 xl:m-4 hover:scale-105 + ${
                                         isOpen
                                             ? 'transition delay-100 ease-in-out opacity-100 pointer-events-auto'
                                             : 'transition delay-0 opacity-0 pointer-events-none'
                                     } `}
                                 >
                                     <button
-                                        className={`relative w-[80vw] h-[80vw] sm:w-[20vw] sm:h-[20vw] z-0 + ${
+                                        className={`relative w-[80vw] h-[80vw] sm:w-[18vw] sm:h-[18vw] z-0 + ${
                                             isOpen
                                                 ? 'transition  delay-200 ease-in-out opacity-100 '
                                                 : 'transition  delay-0 ease-in-out opacity-0 mt-0'
