@@ -1,4 +1,4 @@
-import { motion } from 'framer-motion';
+import { motion } from 'framer-motion/dist/framer-motion';
 import Link from 'next/link';
 import { Fragment } from 'react';
 
@@ -7,10 +7,10 @@ import NextImage from '@/components/NextImage';
 export default function Navbar() {
     return (
         <>
-            <div className='px-2 mx-auto w-screen shadow sm:px-24'>
-                <div className='flex items-center h-auto'>
-                    <div className='flex justify-center items-center w-full sm:justify-start'>
-                        <div className='m-8 w-12 h-12 cursor-pointer sm:w-24 sm:h-24'>
+            <div className='mx-auto w-screen px-2 shadow sm:px-24'>
+                <div className='flex h-auto items-center'>
+                    <div className='flex w-full items-center justify-center sm:justify-start'>
+                        <div className='m-8 h-12 w-12 cursor-pointer sm:h-24 sm:w-24'>
                             <Link href='/' passHref>
                                 <motion.a>
                                     <NextImage
@@ -29,7 +29,7 @@ export default function Navbar() {
                             }}
                             initial={{ scaleY: 0, y: 0 }}
                             transition={{ delay: 1, duration: 0.3 }}
-                            className='hidden text-2xl font-thin origin-bottom sm:block'
+                            className='hidden origin-bottom text-2xl font-thin sm:block'
                         >
                             Think Jeremy Logan
                         </motion.h1>
