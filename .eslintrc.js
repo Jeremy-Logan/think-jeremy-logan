@@ -7,10 +7,10 @@ module.exports = {
   plugins: ['@typescript-eslint', 'simple-import-sort', 'unused-imports'],
   extends: [
     'eslint:recommended',
-    'plugin:@typescript-eslint/recommended',
-    'prettier',
     'next',
     'next/core-web-vitals',
+    'plugin:@typescript-eslint/recommended',
+    'prettier',
   ],
   rules: {
     'no-unused-vars': 'off',
