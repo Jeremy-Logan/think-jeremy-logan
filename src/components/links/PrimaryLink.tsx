@@ -7,10 +7,9 @@ import UnstyledLink, {
 } from '@/components/links/UnstyledLink';
 
 const PrimaryLink = React.forwardRef<HTMLAnchorElement, UnstyledLinkProps>(
-  ({ className, children, ...rest }, ref) => {
+  ({ className, children, ...rest }) => {
     return (
       <UnstyledLink
-        ref={ref}
         {...rest}
         className={clsxm(
           'inline-flex items-center',

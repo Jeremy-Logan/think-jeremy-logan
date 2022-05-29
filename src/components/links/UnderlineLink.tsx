@@ -7,10 +7,9 @@ import UnstyledLink, {
 } from '@/components/links/UnstyledLink';
 
 const UnderlineLink = React.forwardRef<HTMLAnchorElement, UnstyledLinkProps>(
-  ({ children, className, ...rest }, ref) => {
+  ({ children, className, ...rest }) => {
     return (
       <UnstyledLink
-        ref={ref}
         {...rest}
         className={clsxm(
           'animated-underline custom-link inline-flex items-center font-semibold',
