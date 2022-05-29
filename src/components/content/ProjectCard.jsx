@@ -41,12 +41,12 @@ const ProjectCard = ({ props }) => {
         // ref={ref}
         className={` + m-0 skew-y-12 py-4 ${
           isOpen
-            ? 'duration-400 h-[170vh] transition-all ease-in-out sm:h-[40vh] lg:h-[50vh] 2xl:h-[70vh]'
-            : 'h-24 transition-all delay-100 duration-150 ease-in-out '
+            ? 'duration-400 transition-all ease-in-out sm:h-[40vh] lg:h-[50vh] 2xl:h-[70vh]'
+            : 'h-24 transition-all delay-100 duration-150 ease-in-out'
         }`}
       >
         <button onClick={toggleIsOpen} className='z-50 w-full'>
-          <h2 className='relative z-20 my-4 rotate-12 -skew-y-12 transform text-center text-4xl font-semibold text-white'>
+          <h2 className='relative z-20 my-4 rotate-12 -skew-y-12 transform text-center text-4xl font-semibold text-white transition ease-in-out hover:scale-[1.10] active:scale-[.95] active:text-gray-300'>
             {props.section}
           </h2>
         </button>
@@ -63,7 +63,7 @@ const ProjectCard = ({ props }) => {
                 <a
                   target='_blank'
                   rel='noopener noreferrer'
-                  className={`+ m-4 -skew-y-12  rounded-lg bg-white p-4 shadow-lg hover:scale-105 sm:m-2 sm:p-[2vw] xl:m-4 ${
+                  className={`+ m-4 -skew-y-12 rounded-lg bg-white p-4 shadow-lg hover:scale-105 sm:m-2 sm:p-[2vw] xl:m-4 ${
                     isOpen
                       ? 'pointer-events-auto opacity-100 transition delay-100 ease-in-out'
                       : 'delay-0 pointer-events-none opacity-0 transition'

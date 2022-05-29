@@ -4,7 +4,7 @@ const ContactForm = () => {
   const { register } = useForm();
 
   return (
-    <div className='relative z-30 mx-4 mt-12 flex flex-col justify-center sm:mx-[10vw] lg:mx-[25vw]'>
+    <div className='relative z-30 mx-4 flex flex-col justify-center sm:mx-[10vw] sm:mt-12 lg:mx-[25vw]'>
       <h3 className='text-3xl font-light md:text-4xl'>
         How can we work together? Let’s talk it over.
       </h3>
