@@ -7,9 +7,12 @@ module.exports = {
   reactStrictMode: true,
 
   images: {
+    loader: 'cloudinary',
     domains: [
+      
       'res.cloudinary.com',
     ],
+    path: 'https://res.cloudinary.com/the-color-mill/image/upload/'
   },
 
   // SVGR

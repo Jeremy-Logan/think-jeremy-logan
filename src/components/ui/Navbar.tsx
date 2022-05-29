@@ -23,15 +23,15 @@ export default function Navbar() {
                 </motion.a> */}
                 <picture className='h-[192px] w-[192px]'>
                   <source
-                    srcSet='https://res.cloudinary.com/the-color-mill/image/upload/v1653788491/Color%20Mill%20Design/headerLogo_pi3cib.gif'
+                    srcSet='v1653788491/Color%20Mill%20Design/headerLogo_pi3cib.gif'
                     type='image/gif'
                   />
                   <source
-                    srcSet='https://res.cloudinary.com/the-color-mill/image/upload/v1653830108/Color%20Mill%20Design/TJL-Logo_l5muds.png'
+                    srcSet='v1653830108/Color%20Mill%20Design/TJL-Logo_l5muds.png'
                     type='image/png'
                   />
                   <NextImage
-                    src='https://res.cloudinary.com/the-color-mill/image/upload/v1653788491/Color%20Mill%20Design/headerLogo_pi3cib.gif'
+                    src='v1653788491/Color%20Mill%20Design/headerLogo_pi3cib.gif'
                     width='192px'
                     height='192px'
                     alt='logo'
