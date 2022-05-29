@@ -1,5 +1,4 @@
 import type { NextPage } from 'next';
-import * as React from 'react';
 
 // import UnstyledLink from '@/components/links/UnstyledLink';
 // import NextImage from '@/components/NextImage';
@@ -13,7 +12,7 @@ const Home: NextPage = () => {
         <>
             <Seo />
 
-            <main className='scroll-smooth overflow-hidden bg-cyan-50'>
+            <main className='overflow-hidden scroll-smooth bg-cyan-50'>
                 <HeroSection />
                 <ProjectSection />
                 <ContactSection />
