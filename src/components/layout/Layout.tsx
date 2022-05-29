@@ -1,6 +1,16 @@
 import * as React from 'react';
 
-export default function Layout({ children }: { children: React.ReactNode }) {
-  // Put Header or Footer Here
-  return <>{children}</>;
+import Header from './Header';
+
+interface LayoutProps {
+  children: React.ReactNode;
+}
+
+export default function Layout({ children }: LayoutProps) {
+  return (
+    <>
+      <Header />
+      {children}
+    </>
+  );
 }
