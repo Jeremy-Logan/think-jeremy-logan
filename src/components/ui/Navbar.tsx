@@ -1,8 +1,7 @@
 import { motion } from 'framer-motion';
+import Image from 'next/image';
 import Link from 'next/link';
 import { Fragment } from 'react';
-
-import NextImage from '@/components/NextImage';
 
 export default function Navbar() {
   return (
@@ -13,11 +12,12 @@ export default function Navbar() {
             <div className='m-8 h-12 w-12 cursor-pointer sm:h-24 sm:w-24'>
               <Link href='/' passHref>
                 <motion.a>
-                  <NextImage
+                  <Image
                     src='/images/headerLogo.gif'
                     width='192px'
                     height='192px'
                     alt='logo'
+                    layout='responsive'
                   />
                 </motion.a>
               </Link>
