@@ -13,7 +13,7 @@ export default function Navbar() {
               <Link href='/' passHref>
                 <motion.a>
                   <Image
-                    src='https://res.cloudinary.com/the-color-mill/image/upload/v1653788491/Color%20Mill%20Design/headerLogo_pi3cib.gif'
+                    src='/favicon/ms-icon-310x310.png'
                     width='192px'
                     height='192px'
                     alt='logo'
