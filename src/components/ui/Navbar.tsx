@@ -29,7 +29,7 @@ export default function Navbar() {
               }}
               initial={{ scaleY: 0, y: 0 }}
               transition={{ delay: 1, duration: 0.3 }}
-              className='hidden origin-bottom text-2xl font-thin sm:block'
+              className='hidden origin-bottom text-2xl font-normal sm:block'
             >
               Think Jeremy Logan
             </motion.h1>
