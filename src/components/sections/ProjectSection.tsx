@@ -5,14 +5,11 @@ import projects from '../../lib/projectData.json';
 
 const ProjectSection = () => {
   return (
-    <>
-      {' '}
-      <div className='z-0 mt-24 mb-24 h-full sm:mb-60'>
-        {projects.projectData.map((data, i) => {
-          return <ProjectCard key={i} props={data} />;
-        })}
-      </div>
-    </>
+    <div className='z-50 mt-60 w-screen border-t-[1px] border-t-indigo-600 bg-indigo-900/90'>
+      <ProjectCard props={projects.projectData[0]} />;
+      <ProjectCard props={projects.projectData[1]} />
+      <ProjectCard props={projects.projectData[2]} />
+    </div>
   );
 };
 

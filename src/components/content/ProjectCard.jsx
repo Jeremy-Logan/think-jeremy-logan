@@ -1,81 +1,66 @@
+import { motion, useAnimation } from 'framer-motion';
 import Image from 'next/image';
 import Link from 'next/link';
+import { useEffect } from 'react';
+import { useInView } from 'react-intersection-observer';
 
-// import { useRef } from 'react';
+import 'simplebar-react/dist/simplebar.min.css';
+
 import ImageModal from '../content/ImageModal';
-// import useOutsideClick from '../hooks/useOutsideClick';
 import useToggle from '../hooks/useToggle';
 
-// export interface Welcome {
-//     projectData: ProjectDatum[];
-// }
-
-// export interface ProjectDatum {
-//     section:  string;
-//     bgColor:  string;
-//     projects: Project[];
-// }
-
-// export interface Project {
-//     title:   string;
-//     content: Content;
-// }
-
-// export interface Content {
-//     link:     string;
-//     imageURL: string;
-// }
+const imageVariant = {
+  onScreen: {
+    opacity: 1,
+    transition: { delay: 0.05, ease: 'easeInOut', duration: 0.05 },
+  },
+  offScreen: {
+    opacity: 0,
+    transition: { delay: 0, ease: 'easeInOut', duration: 0.05 },
+  },
+};
 
 const ProjectCard = ({ props }) => {
-  const [isOpen, toggleIsOpen] = useToggle(false);
-  // const ref = useRef();
+  const [toggleIsOpen] = useToggle(false);
+  const control = useAnimation();
+  const { ref, inView } = useInView({
+    triggerOnce: false,
+    threshold: 0.25,
+    initialInView: false,
+  });
 
-  // useOutsideClick(ref, () => {
-  //     if (isOpen) toggleIsOpen(false);
-  // });
+  useEffect(() => {
+    if (inView) {
+      control.start('onScreen');
+    } else {
+      control.start('offScreen');
+    }
+  }, [control, inView]);
 
   return (
-    <>
-      <div
-        style={{ backgroundColor: `${props.bgColor}` }}
-        // ref={ref}
-        className={` + m-0 skew-y-12 py-4 ${
-          isOpen
-            ? 'duration-400 transition-all ease-in-out sm:h-[40vh] lg:h-[50vh] 2xl:h-[70vh]'
-            : 'h-24 transition-all delay-100 duration-150 ease-in-out'
-        }`}
+    <div className='flex w-screen flex-col justify-center lg:my-24'>
+      <h2 className='mt-12 mb-4 text-center text-4xl font-thin text-white lg:mb-12'>
+        {props.section}
+      </h2>
+      <div className='z-50 mx-auto mt-2 mb-20 h-[1px] w-[50vw] bg-white'></div>
+
+      <motion.div
+        ref={ref}
+        className='my-auto mx-auto grid h-full w-screen gap-4 md:w-[65vw] md:grid-cols-2'
       >
-        <button onClick={toggleIsOpen} className='z-50 w-full'>
-          <h2 className='relative z-20 my-4 rotate-12 -skew-y-12 transform text-center text-4xl font-semibold text-white transition ease-in-out hover:scale-[1.10] active:scale-[.95] active:text-gray-300'>
-            {props.section}
-          </h2>
-        </button>
-        <div
-          className={`+ z-0 my-12 flex flex-col justify-center sm:flex-row ${
-            isOpen
-              ? 'opacity-100 transition ease-in-out'
-              : 'delay-0 opacity-0 transition'
-          }`}
-        >
-          {props.projects.map((project, i) => {
-            return project.content.link ? (
-              <Link href={project.content.link} key={i} passHref>
-                <a
+        {props.projects.map((project, i) => {
+          return project.content.link ? (
+            <Link href={project.content.link} key={i} passHref>
+              <div className='flex flex-col justify-center'>
+                <motion.a
+                  variants={imageVariant}
+                  initial='offScreen'
+                  animate={control}
                   target='_blank'
                   rel='noopener noreferrer'
-                  className={`+ m-4 -skew-y-12 rounded-lg bg-white p-4 shadow-lg hover:scale-105 sm:m-2 sm:p-[2vw] xl:m-4 ${
-                    isOpen
-                      ? 'pointer-events-auto opacity-100 transition delay-100 ease-in-out'
-                      : 'delay-0 pointer-events-none opacity-0 transition'
-                  } `}
+                  className='transtion-all mx-auto h-[90vw] w-[90vw] shadow-lg duration-300 ease-in-out hover:scale-105 sm:h-[70vw] sm:w-[70vw] md:h-[30vw] md:w-[30vw] '
                 >
-                  <button
-                    className={`+ relative z-0 h-[80vw] w-[80vw] sm:h-[18vw] sm:w-[18vw] ${
-                      isOpen
-                        ? 'opacity-100  transition delay-200 ease-in-out '
-                        : 'delay-0  mt-0 opacity-0 transition ease-in-out'
-                    }`}
-                  >
+                  <button className='relative z-0 h-full w-full'>
                     <Image
                       src={project.content.imageURL}
                       alt={project.title}
@@ -83,25 +68,34 @@ const ProjectCard = ({ props }) => {
                       objectFit='cover'
                     />
                   </button>
-                </a>
-              </Link>
-            ) : (
-              <div key={i}>
-                <div
-                  className={`+ z-0 m-4  -skew-y-12 rounded-lg bg-white p-4 shadow-lg hover:scale-105 sm:p-[2vw] ${
-                    isOpen
-                      ? 'pointer-events-auto opacity-100 transition delay-100 ease-in-out'
-                      : 'delay-0 pointer-events-none opacity-0 transition'
-                  } `}
-                >
-                  <ImageModal project={project} isOpen={isOpen} />
-                </div>
+                </motion.a>
+                <div className='mx-auto mt-6 h-[1px] w-36 bg-white lg:w-72' />
+                <h3 className='mt-2 mb-12 self-center text-center font-light text-white'>
+                  {project.title}
+                </h3>
               </div>
-            );
-          })}
-        </div>
-      </div>
-    </>
+            </Link>
+          ) : (
+            <div className='flex flex-col justify-center'>
+              <motion.div
+                variants={imageVariant}
+                initial='offScreen'
+                animate={control}
+                target='_blank'
+                rel='noopener noreferrer'
+                className='transtion-all mx-auto h-[90vw] w-[90vw] shadow-lg duration-300 ease-in-out hover:scale-105 sm:h-[70vw] sm:w-[70vw] md:h-[30vw] md:w-[30vw] '
+              >
+                <ImageModal project={project} isOpen={toggleIsOpen} />
+              </motion.div>
+              <div className='mx-auto mt-6 h-[1px] w-36 bg-white lg:w-72' />
+              <h3 className='mt-2 mb-12 self-center text-center font-light text-white'>
+                {project.title}
+              </h3>
+            </div>
+          );
+        })}
+      </motion.div>
+    </div>
   );
 };
 

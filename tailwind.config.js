@@ -17,6 +17,7 @@ module.exports = {
     extend: {
       fontFamily: {
         primary: ['Inter', ...fontFamily.sans],
+        'serif': ['ui-serif', 'Merriweather'],
       },
       colors: {
         primary: {

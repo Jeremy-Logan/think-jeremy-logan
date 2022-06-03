@@ -1,18 +1,15 @@
 import { Dialog, Transition } from '@headlessui/react';
-import { XCircleIcon } from '@heroicons/react/solid';
+import { XIcon } from '@heroicons/react/solid';
+import { motion } from 'framer-motion';
 import Image from 'next/image';
 import { Fragment, useState } from 'react';
 
-const ImageModal = ({ project }, isOpen) => {
+const ImageModal = ({ project }) => {
   const [openModal, setOpenModal] = useState(false);
   return (
     <>
-      <button
-        className={`+ relative z-0 h-[80vw] w-[80vw] sm:h-[20vw] sm:w-[20vw] ${
-          isOpen
-            ? 'opacity-100  transition delay-200 duration-150 ease-in-out'
-            : 'delay-0  opacity-0 transition ease-in-out'
-        }`}
+      <motion.button
+        className='relative z-0 h-full w-full '
         onClick={() => {
           setOpenModal(true);
         }}
@@ -23,7 +20,7 @@ const ImageModal = ({ project }, isOpen) => {
           layout='fill'
           objectFit='cover'
         />
-      </button>
+      </motion.button>
       <Transition.Root show={openModal} as={Fragment}>
         <Dialog
           as='div'
@@ -40,7 +37,7 @@ const ImageModal = ({ project }, isOpen) => {
               leaveFrom='opacity-100'
               leaveTo='opacity-0'
             >
-              <Dialog.Overlay className='fixed inset-0 bg-gray-500 bg-opacity-75 transition-opacity' />
+              <Dialog.Overlay className='backdrop-saturate-75 fixed inset-0 bg-gradient-to-br from-sky-500/20 to-sky-200/10 backdrop-blur-xl -backdrop-hue-rotate-15 transition-opacity' />
             </Transition.Child>
 
             {/* This element is to trick the browser into centering the modal contents. */}
@@ -59,27 +56,30 @@ const ImageModal = ({ project }, isOpen) => {
               leaveFrom='opacity-100 translate-y-0 sm:scale-100'
               leaveTo='opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95'
             >
-              <div className='z-50 my-auto inline-block w-full transform overflow-hidden rounded-lg bg-white px-4 pt-5 pb-4 text-left shadow-xl transition-all sm:mt-36 sm:w-full sm:max-w-4xl sm:p-6 sm:pb-12 sm:align-middle'>
+              <motion.div
+                layout
+                className='z-50 my-auto inline-block w-full transform overflow-hidden rounded-lg bg-white px-4 pt-5 pb-4 text-left shadow-xl transition-all sm:mt-36 sm:w-full sm:max-w-4xl sm:p-6 sm:pb-12 sm:align-middle'
+              >
                 <div>
                   <button
                     onClick={() => setOpenModal(false)}
                     className='flex h-6 w-full items-center justify-end'
                   >
-                    <XCircleIcon
-                      className='h-6 w-6 text-red-600'
+                    <XIcon
+                      className='h-8 w-8 text-cyan-700'
                       aria-hidden='true'
                     />
                   </button>
-                  <div className='relative mx-auto h-[80vw] w-[80vw] xl:h-[55vw] xl:w-[55vw] 2xl:h-[35vw] 2xl:w-[35vw]'>
+                  <motion.div className='relative mx-auto h-[80vw] w-[80vw] xl:h-[55vw] xl:w-[55vw] 2xl:h-[35vw] 2xl:w-[35vw]'>
                     <Image
                       src={project.content.imageURL}
                       alt={project.title}
                       layout='fill'
                       objectFit='cover'
                     />
-                  </div>
+                  </motion.div>
                 </div>
-              </div>
+              </motion.div>
             </Transition.Child>
           </div>
         </Dialog>

@@ -1,5 +1,6 @@
 import type { NextPage } from 'next';
 
+import BlobBackground from '@/components/sections/BlobBackground';
 // import UnstyledLink from '@/components/links/UnstyledLink';
 // import NextImage from '@/components/NextImage';
 import ContactSection from '@/components/sections/ContactSection';
@@ -12,11 +13,12 @@ const Home: NextPage = () => {
     <>
       <Seo />
 
-      <main className='overflow-hidden scroll-smooth bg-cyan-50'>
+      <main className='snap-y snap-proximity overflow-hidden'>
         <HeroSection />
+
         <ProjectSection />
         <ContactSection />
-        <div className='h-36'></div>
+        <BlobBackground />
       </main>
     </>
   );

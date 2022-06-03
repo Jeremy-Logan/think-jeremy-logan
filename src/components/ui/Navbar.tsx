@@ -7,10 +7,10 @@ import NextImage from '../NextImage';
 export default function Navbar() {
   return (
     <>
-      <div className='mx-auto w-screen px-2 shadow sm:px-24'>
-        <div className='flex h-auto items-center'>
+      <div className='relative mx-auto w-screen px-2 opacity-100 sm:px-24 '>
+        <div className='flex items-center'>
           <div className='flex w-full items-center justify-center sm:justify-start'>
-            <div className='m-8 h-12 w-12 cursor-pointer sm:h-24 sm:w-24'>
+            <div className='m-8 h-12 w-12 cursor-pointer shadow-xl shadow-sky-700/40 transition-all duration-200 ease-in-out hover:scale-105 hover:shadow-sky-700/60 active:scale-95 active:shadow-sky-600/80 sm:h-24 sm:w-24'>
               <Link href='/' passHref>
                 {/* <motion.a>
                   <Image
@@ -21,9 +21,9 @@ export default function Navbar() {
                     layout='responsive'
                   />
                 </motion.a> */}
-                <picture className='h-[192px] w-[192px]'>
+                <picture className='h-24 w-24 '>
                   <source
-                    srcSet='v1653788491/Color%20Mill%20Design/headerLogo_pi3cib.gif'
+                    srcSet='v1654091088/Color%20Mill%20Design/headerLogo_ty5dmw.gif'
                     type='image/gif'
                   />
                   <source
@@ -31,7 +31,7 @@ export default function Navbar() {
                     type='image/png'
                   />
                   <NextImage
-                    src='v1653788491/Color%20Mill%20Design/headerLogo_pi3cib.gif'
+                    src='v1654091088/Color%20Mill%20Design/headerLogo_ty5dmw.gif'
                     width='192px'
                     height='192px'
                     alt='logo'
@@ -47,7 +47,7 @@ export default function Navbar() {
               }}
               initial={{ scaleY: 0, y: 0 }}
               transition={{ delay: 1.2, duration: 0.3 }}
-              className='hidden origin-bottom text-2xl font-normal sm:block'
+              className='hidden origin-bottom text-2xl font-normal text-white sm:block '
             >
               Think Jeremy Logan
             </motion.h1>
