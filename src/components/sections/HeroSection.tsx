@@ -20,7 +20,7 @@ export default function HeroSection() {
     <div className='mx-auto w-screen '>
       <motion.div
         initial={{ opacity: 0 }}
-        animate={{ scale: '1', opacity: 1 }}
+        animate={{ opacity: 1 }}
         className='mt-12 mb-0 flex w-screen sm:h-12 xl:mt-20 xl:mb-12 xl:h-[40vh]'
       >
         {/* <div className='relative mx-auto mb-6 h-36 w-36 justify-center lg:h-48 lg:w-48'>

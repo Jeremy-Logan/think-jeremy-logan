@@ -76,7 +76,7 @@ const ProjectCard = ({ props }) => {
               </div>
             </Link>
           ) : (
-            <div className='flex flex-col justify-center'>
+            <div className='flex flex-col justify-center' key={i}>
               <motion.div
                 variants={imageVariant}
                 initial='offScreen'
@@ -100,7 +100,3 @@ const ProjectCard = ({ props }) => {
 };
 
 export default ProjectCard;
-
-{
-  /* <Image src={(coverImage[0].content[1].imageLink)} alt={props.projects[0].title} width={480} height={480}/> */
-}
