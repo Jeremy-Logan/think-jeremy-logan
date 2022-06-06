@@ -1,6 +1,5 @@
 import { motion, useAnimation } from 'framer-motion';
 import Image from 'next/image';
-import Link from 'next/link';
 import { useEffect } from 'react';
 import { useInView } from 'react-intersection-observer';
 
@@ -50,31 +49,30 @@ const ProjectCard = ({ props }) => {
       >
         {props.projects.map((project, i) => {
           return project.content.link ? (
-            <Link href={project.content.link} key={i} passHref>
-              <div className='flex flex-col justify-center'>
-                <motion.a
-                  variants={imageVariant}
-                  initial='offScreen'
-                  animate={control}
-                  target='_blank'
-                  rel='noopener noreferrer'
-                  className='transtion-all mx-auto h-[90vw] w-[90vw] shadow-lg duration-300 ease-in-out hover:scale-105 sm:h-[70vw] sm:w-[70vw] md:h-[30vw] md:w-[30vw] '
-                >
-                  <button className='relative z-0 h-full w-full'>
-                    <Image
-                      src={project.content.imageURL}
-                      alt={project.title}
-                      layout='fill'
-                      objectFit='cover'
-                    />
-                  </button>
-                </motion.a>
-                <div className='mx-auto mt-6 h-[1px] w-36 bg-white lg:w-72' />
-                <h3 className='mt-2 mb-12 self-center text-center font-light text-white'>
-                  {project.title}
-                </h3>
-              </div>
-            </Link>
+            <div className='flex flex-col justify-center' key={i}>
+              <motion.a
+                href={project.content.link}
+                variants={imageVariant}
+                initial='offScreen'
+                animate={control}
+                target='_blank'
+                rel='noopener noreferrer'
+                className='transtion-all mx-auto h-[90vw] w-[90vw] shadow-lg duration-300 ease-in-out hover:scale-105 sm:h-[70vw] sm:w-[70vw] md:h-[30vw] md:w-[30vw] '
+              >
+                <button className='relative z-0 h-full w-full'>
+                  <Image
+                    src={project.content.imageURL}
+                    alt={project.title}
+                    layout='fill'
+                    objectFit='cover'
+                  />
+                </button>
+              </motion.a>
+              <div className='mx-auto mt-6 h-[1px] w-36 bg-white lg:w-72' />
+              <h3 className='mt-2 mb-12 self-center text-center font-light text-white'>
+                {project.title}
+              </h3>
+            </div>
           ) : (
             <div className='flex flex-col justify-center' key={i}>
               <motion.div
