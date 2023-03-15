@@ -1,8 +1,7 @@
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import { useEffect, useRef, useState } from 'react';
-
-import NextImage from '../NextImage';
+import Image from '../Image';
 
 export default function Navbar() {
   const pictureRef = useRef<HTMLPictureElement>(null);
@@ -52,12 +51,13 @@ export default function Navbar() {
                     srcSet='v1653830108/Color Mill Design/TJL-Logo_l5muds.png'
                     type='image/png'
                   />
-                  <NextImage
+                  <Image
                     src='v1654091088/Color Mill Design/headerLogo_ty5dmw.gif'
-                    width='192px'
-                    height='192px'
-                    alt='logo'
-                    layout='responsive'
+                    width={192}
+                    height={192}
+                    style={{ objectFit: 'contain' }}
+                    sizes="(max-width: 192px) 192px,"
+                    alt='logo' fill={false}                    
                   />
                 </picture>
               </Link>

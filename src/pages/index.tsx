@@ -1,8 +1,6 @@
 import type { NextPage } from 'next';
 
 import BlobBackground from '@/components/sections/BlobBackground';
-// import UnstyledLink from '@/components/links/UnstyledLink';
-// import NextImage from '@/components/NextImage';
 import ContactSection from '@/components/sections/ContactSection';
 import HeroSection from '@/components/sections/HeroSection';
 import ProjectSection from '@/components/sections/ProjectSection';
