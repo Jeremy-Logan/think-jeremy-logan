@@ -50,7 +50,7 @@ const ProjectCard = ({ props }: Props) => {
       <h2 className="mt-12 mb-4 text-center text-4xl font-thin text-white lg:mb-12">
         {section && section}
       </h2>
-      <div className="z-10 mx-auto mt-2 mb-20 h-[1px] w-[50vw] bg-white"></div>
+      <div className=" mx-auto mt-2 mb-20 h-[1px] w-[50vw] bg-white"></div>
 
       <motion.div className="my-auto mx-auto grid h-full w-full grid-cols-1 gap-4 md:w-[65vw] md:grid-cols-2">
         {projects && projects.map((project, i) => {
