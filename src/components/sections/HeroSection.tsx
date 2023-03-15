@@ -1,8 +1,8 @@
-import { motion, useTransform, useViewportScroll } from 'framer-motion';
+import { motion, useTransform, useScroll } from 'framer-motion';
 import * as React from 'react';
 
 export default function HeroSection() {
-  const { scrollYProgress } = useViewportScroll();
+  const { scrollYProgress } = useScroll();
 
   const barParallax1 = useTransform(scrollYProgress, [0, 1], [0, -5000]);
   const barParallax2 = useTransform(
@@ -35,13 +35,13 @@ export default function HeroSection() {
         <div className='2xl:mr-30 mx-4 md:w-7/12 lg:mx-0 lg:mr-24 xl:w-7/12 2xl:w-5/12'>
           <h1
             style={{ lineHeight: '1em' }}
-            className='mb-4 px-4 text-left font-serif text-base text-3xl font-semibold text-white xl:text-4xl 2xl:text-5xl'
+            className='mb-4 px-4 text-left font-serif  text-3xl font-semibold text-white xl:text-4xl 2xl:text-5xl'
           >
             Hello. I&apos;m Jeremy Logan.
           </h1>
           <p
             style={{ lineHeight: '1.75em' }}
-            className=' px-4 text-left text-base font-light text-white lg:text-xl'
+            className=' max-w-3xl px-4 text-left text-base font-light text-white lg:text-xl'
           >
             I’m a designer and a coder, driven by the belief that exceptional
             design elevates the world. I’m a logical thinker, thrive in

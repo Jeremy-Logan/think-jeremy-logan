@@ -1,10 +1,32 @@
 import { motion } from 'framer-motion';
 import Link from 'next/link';
-import { Fragment } from 'react';
+import { useEffect, useRef, useState } from 'react';
 
 import NextImage from '../NextImage';
 
 export default function Navbar() {
+  const pictureRef = useRef<HTMLPictureElement>(null);
+  const [isPageLoaded, setPageLoaded] = useState(false);
+
+  useEffect(() => {
+    if (pictureRef.current) {
+      const sources = pictureRef.current.querySelectorAll('source');
+      sources.forEach((source) => {
+        const srcset = source.srcset;
+        source.removeAttribute('srcset');
+        source.setAttribute('srcset', `${srcset}?t=${new Date().getTime()}`);
+      });
+    }
+
+    // Set `isPageLoaded` to `true` when the page finishes loading
+    window.addEventListener('load', () => setPageLoaded(true));
+
+    // Clean up the event listener
+    return () => {
+      window.removeEventListener('load', () => setPageLoaded(true));
+    };
+  }, []);
+
   return (
     <>
       <div className='relative mx-auto w-screen px-2 opacity-100 sm:px-24 '>
@@ -21,17 +43,17 @@ export default function Navbar() {
                     layout='responsive'
                   />
                 </motion.a> */}
-                <picture className='h-24 w-24 '>
+                <picture className='h-24 w-24 ' ref={pictureRef}>
                   <source
-                    srcSet='v1654091088/Color%20Mill%20Design/headerLogo_ty5dmw.gif'
+                    srcSet='v1654091088/Color Mill Design/headerLogo_ty5dmw.gif'
                     type='image/gif'
                   />
                   <source
-                    srcSet='v1653830108/Color%20Mill%20Design/TJL-Logo_l5muds.png'
+                    srcSet='v1653830108/Color Mill Design/TJL-Logo_l5muds.png'
                     type='image/png'
                   />
                   <NextImage
-                    src='v1654091088/Color%20Mill%20Design/headerLogo_ty5dmw.gif'
+                    src='v1654091088/Color Mill Design/headerLogo_ty5dmw.gif'
                     width='192px'
                     height='192px'
                     alt='logo'

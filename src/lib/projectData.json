@@ -1,6 +1,56 @@
 {
   "projectData": [
     {
+      "section": "ILLUSTRATION",
+      "sectionBody": "Lorem ipsum dolor sit amet consectetur adipiscing elit, urna consequat felis vehicula class ultricies mollis dictumst, aenean non a in donec nulla. Phasellus ante pellentesque erat cum risus consequat imperdiet aliquam, integer placerat et turpis mi eros nec lobortis taciti, vehicula nisl litora tellus ligula porttitor metus. Vivamus integer non suscipit taciti mus etiam at primis tempor sagittis sit, euismod libero facilisi aptent elementum felis blandit cursus gravida sociis erat ante, eleifend lectus nullam dapibus netus feugiat curae curabitur est ad. Massa curae fringilla porttitor quam sollicitudin iaculis aptent leo ligula euismod dictumst, orci penatibus mauris eros etiam praesent erat volutpat posuere hac. Metus fringilla nec ullamcorper odio aliquam lacinia conubia mauris tempor, etiam ultricies proin quisque lectus sociis id tristique, integer phasellus taciti pretium adipiscing tortor sagittis ligula.",
+      "bgColor": "#ef4444",
+      "projects": [
+        {
+          "title": "Mendocino Spirits Bourbon",
+          "content": {
+            "imageURL": "v1678900661/Color%20Mill%20Design/bourbon-web_oivqyn.jpg"
+          }
+        },
+        {
+          "title": "Mendocino Spirits Spirit Whiskey",
+          "content": {
+            "imageURL": "v1678900662/Color%20Mill%20Design/spirit-whiskey-web_ffjlh3.jpg"
+          }
+        },
+        {
+          "title": "Mendocino Spirits Dry Gin",
+          "content": {
+            "imageURL": "v1678900662/Color%20Mill%20Design/dry-gin-web_re9yf6.jpg"
+          }
+        },
+
+        {
+          "title": "Mendocino Spirits Aged Gin",
+          "content": {
+            "imageURL": "v1678899819/Color%20Mill%20Design/aged-gin-web_gzvw7f.jpg"
+          }
+        },
+        {
+          "title": "Mendocino Spirits Rye Malt Whiskey",
+          "content": {
+            "imageURL": "v1678900662/Color%20Mill%20Design/rye-malt-web_nrzhkn.jpg"
+          }
+        },
+        {
+          "title": "Boonville Betty",
+          "content": {
+            "imageURL": "v1641948871/Color%20Mill%20Design/Betty_Instagram_Not_transparent_bsqzvp.jpg"
+          }
+        },
+        {
+          "title": "Memento Mori",
+          "content": {
+            "imageURL": "v1642285573/Color%20Mill%20Design/Memento_Mori_nnzpzd.jpg"
+          }
+        }
+      ]
+    },
+    {
       "section": "WEBSITES",
       "sectionBody": "I work primarily in React and NextJS...",
       "bgColor": "#f97316",
@@ -42,31 +92,7 @@
         }
       ]
     },
-    {
-      "section": "ILLUSTRATION",
-      "sectionBody": "Lorem ipsum dolor sit amet consectetur adipiscing elit, urna consequat felis vehicula class ultricies mollis dictumst, aenean non a in donec nulla. Phasellus ante pellentesque erat cum risus consequat imperdiet aliquam, integer placerat et turpis mi eros nec lobortis taciti, vehicula nisl litora tellus ligula porttitor metus. Vivamus integer non suscipit taciti mus etiam at primis tempor sagittis sit, euismod libero facilisi aptent elementum felis blandit cursus gravida sociis erat ante, eleifend lectus nullam dapibus netus feugiat curae curabitur est ad. Massa curae fringilla porttitor quam sollicitudin iaculis aptent leo ligula euismod dictumst, orci penatibus mauris eros etiam praesent erat volutpat posuere hac. Metus fringilla nec ullamcorper odio aliquam lacinia conubia mauris tempor, etiam ultricies proin quisque lectus sociis id tristique, integer phasellus taciti pretium adipiscing tortor sagittis ligula.",
-      "bgColor": "#ef4444",
-      "projects": [
-        {
-          "title": "Boonville Betty",
-          "content": {
-            "imageURL": "v1641948871/Color%20Mill%20Design/Betty_Instagram_Not_transparent_bsqzvp.jpg"
-          }
-        },
-        {
-          "title": "Mendocino Spirits Dry Gin",
-          "content": {
-            "imageURL": "v1642285141/Color%20Mill%20Design/Dry-Gin-Label_tfr30h.jpg"
-          }
-        },
-        {
-          "title": "Memento Mori",
-          "content": {
-            "imageURL": "v1642285573/Color%20Mill%20Design/Memento_Mori_nnzpzd.jpg"
-          }
-        }
-      ]
-    },
+
     {
       "section": "GRAPHIC DESIGN",
       "sectionBody": "Lorem ipsum dolor sit amet consectetur adipiscing elit, urna consequat felis vehicula class ultricies mollis dictumst, aenean non a in donec nulla. Phasellus ante pellentesque erat cum risus consequat imperdiet aliquam, integer placerat et turpis mi eros nec lobortis taciti, vehicula nisl litora tellus ligula porttitor metus. Vivamus integer non suscipit taciti mus etiam at primis tempor sagittis sit, euismod libero facilisi aptent elementum felis blandit cursus gravida sociis erat ante, eleifend lectus nullam dapibus netus feugiat curae curabitur est ad. Massa curae fringilla porttitor quam sollicitudin iaculis aptent leo ligula euismod dictumst, orci penatibus mauris eros etiam praesent erat volutpat posuere hac. Metus fringilla nec ullamcorper odio aliquam lacinia conubia mauris tempor, etiam ultricies proin quisque lectus sociis id tristique, integer phasellus taciti pretium adipiscing tortor sagittis ligula.",

@@ -9,7 +9,7 @@ const ImageModal = ({ project }) => {
   return (
     <>
       <motion.button
-        className='relative z-0 h-full w-full '
+        className='relative z-0 h-full w-full bg-white'
         onClick={() => {
           setOpenModal(true);
         }}
@@ -18,7 +18,7 @@ const ImageModal = ({ project }) => {
           src={project.content.imageURL}
           alt={project.title}
           layout='fill'
-          objectFit='cover'
+          objectFit='contain'
         />
       </motion.button>
       <Transition.Root show={openModal} as={Fragment}>
@@ -58,24 +58,24 @@ const ImageModal = ({ project }) => {
             >
               <motion.div
                 layout
-                className='z-50 my-auto inline-block w-full transform overflow-hidden rounded-lg bg-white px-4 pt-5 pb-4 text-left shadow-xl transition-all sm:mt-36 sm:w-full sm:max-w-4xl sm:p-6 sm:pb-12 sm:align-middle'
+                className='z-50 my-auto mx-auto inline-block w-full transform overflow-hidden rounded-lg bg-white pt-5 pb-4 text-left shadow-xl transition-all sm:w-full sm:pb-12 sm:align-middle  xl:w-[75vw] 2xl:w-[42vw]'
               >
                 <div>
                   <button
                     onClick={() => setOpenModal(false)}
-                    className='flex h-6 w-full items-center justify-end'
+                    className='flex h-6 w-full items-center justify-end pr-3'
                   >
                     <XIcon
                       className='h-8 w-8 text-cyan-700'
                       aria-hidden='true'
                     />
                   </button>
-                  <motion.div className='relative mx-auto h-[80vw] w-[80vw] xl:h-[55vw] xl:w-[55vw] 2xl:h-[35vw] 2xl:w-[35vw]'>
+                  <motion.div className='relative mx-auto h-[95vw] w-[95vw] xl:h-[75vw] xl:w-[75vw] 2xl:h-[42vw] 2xl:w-[42vw]'>
                     <Image
                       src={project.content.imageURL}
                       alt={project.title}
                       layout='fill'
-                      objectFit='cover'
+                      objectFit='contain'
                     />
                   </motion.div>
                 </div>
