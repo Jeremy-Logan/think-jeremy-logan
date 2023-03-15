@@ -6,7 +6,7 @@ import NextImage from '../NextImage';
 
 export default function Navbar() {
   const pictureRef = useRef<HTMLPictureElement>(null);
-  const [isPageLoaded, setPageLoaded] = useState(false);
+  const [, setPageLoaded] = useState(false);
 
   useEffect(() => {
     if (pictureRef.current) {

@@ -1,4 +1,4 @@
-import { motion, useTransform, useScroll } from 'framer-motion';
+import { motion, useScroll, useTransform } from 'framer-motion';
 import * as React from 'react';
 
 export default function HeroSection() {
