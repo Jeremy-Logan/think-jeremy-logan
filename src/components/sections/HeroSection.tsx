@@ -51,7 +51,7 @@ export default function HeroSection() {
         </div>
         {/* <div className='w-1/12'></div> */}
       </motion.div>
-      <div className='z-50 mt-10 flex flex-col sm:mt-60 xl:-mt-36'>
+      <div className='2xl:-mt-30 z-50 mt-10 flex flex-col sm:mt-60 xl:-mt-[4.5em]'>
         <motion.div
           style={{ translateY: barParallax1, rotate: '12deg' }}
           className='transfrom backdrop-saturate-75 -ml-12 mb-8 h-10 w-[120vw] rotate-[12deg] border-b-[1px] border-t-[1px] border-t-red-400/50 border-b-red-800/50 bg-gradient-to-r from-red-600/50  to-red-600/40 shadow-lg shadow-red-800/30 backdrop-blur-xl -backdrop-hue-rotate-15 sm:h-14 xl:-ml-24 xl:h-24'
