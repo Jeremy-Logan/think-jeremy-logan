@@ -2,24 +2,25 @@
   "projectData": [
     {
       "section": "ILLUSTRATION",
-      "sectionBody": "Lorem ipsum dolor sit amet consectetur adipiscing elit, urna consequat felis vehicula class ultricies mollis dictumst, aenean non a in donec nulla. Phasellus ante pellentesque erat cum risus consequat imperdiet aliquam, integer placerat et turpis mi eros nec lobortis taciti, vehicula nisl litora tellus ligula porttitor metus. Vivamus integer non suscipit taciti mus etiam at primis tempor sagittis sit, euismod libero facilisi aptent elementum felis blandit cursus gravida sociis erat ante, eleifend lectus nullam dapibus netus feugiat curae curabitur est ad. Massa curae fringilla porttitor quam sollicitudin iaculis aptent leo ligula euismod dictumst, orci penatibus mauris eros etiam praesent erat volutpat posuere hac. Metus fringilla nec ullamcorper odio aliquam lacinia conubia mauris tempor, etiam ultricies proin quisque lectus sociis id tristique, integer phasellus taciti pretium adipiscing tortor sagittis ligula.",
-      "bgColor": "#ef4444",
       "projects": [
         {
           "title": "Mendocino Spirits Bourbon",
           "content": {
+            "link": "",
             "imageURL": "/v1678900661/color-mill-design-2023/bourbon-web_oivqyn.jpg"
           }
         },
         {
           "title": "Mendocino Spirits Spirit Whiskey",
           "content": {
+            "link": "",
             "imageURL": "/v1678900662/color-mill-design-2023/spirit-whiskey-web_ffjlh3.jpg"
           }
         },
         {
           "title": "Mendocino Spirits Dry Gin",
           "content": {
+            "link": "",
             "imageURL": "/v1678900662/color-mill-design-2023/dry-gin-web_re9yf6.jpg"
           }
         },
@@ -27,24 +28,28 @@
         {
           "title": "Mendocino Spirits Aged Gin",
           "content": {
+            "link": "",
             "imageURL": "/v1678899819/color-mill-design-2023/aged-gin-web_gzvw7f.jpg"
           }
         },
         {
           "title": "Mendocino Spirits Rye Malt Whiskey",
           "content": {
+            "link": "",
             "imageURL": "/v1678900662/color-mill-design-2023/rye-malt-web_nrzhkn.jpg"
           }
         },
         {
           "title": "Boonville Betty",
           "content": {
+            "link": "",
             "imageURL": "/v1641948871/color-mill-design-2023/Betty_Instagram_Not_transparent_bsqzvp.jpg"
           }
         },
         {
           "title": "Memento Mori",
           "content": {
+            "link": "",
             "imageURL": "/v1642285573/color-mill-design-2023/Memento_Mori_nnzpzd.jpg"
           }
         }
@@ -52,8 +57,6 @@
     },
     {
       "section": "WEBSITES",
-      "sectionBody": "I work primarily in React and NextJS...",
-      "bgColor": "#f97316",
       "projects": [
         {
           "title": "Color Mill Design",
@@ -95,24 +98,25 @@
 
     {
       "section": "GRAPHIC DESIGN",
-      "sectionBody": "Lorem ipsum dolor sit amet consectetur adipiscing elit, urna consequat felis vehicula class ultricies mollis dictumst, aenean non a in donec nulla. Phasellus ante pellentesque erat cum risus consequat imperdiet aliquam, integer placerat et turpis mi eros nec lobortis taciti, vehicula nisl litora tellus ligula porttitor metus. Vivamus integer non suscipit taciti mus etiam at primis tempor sagittis sit, euismod libero facilisi aptent elementum felis blandit cursus gravida sociis erat ante, eleifend lectus nullam dapibus netus feugiat curae curabitur est ad. Massa curae fringilla porttitor quam sollicitudin iaculis aptent leo ligula euismod dictumst, orci penatibus mauris eros etiam praesent erat volutpat posuere hac. Metus fringilla nec ullamcorper odio aliquam lacinia conubia mauris tempor, etiam ultricies proin quisque lectus sociis id tristique, integer phasellus taciti pretium adipiscing tortor sagittis ligula.",
-      "bgColor": "#ec4899",
       "projects": [
         {
           "title": "Mendocino Spirits Bottles",
           "content": {
+            "link": "",
             "imageURL": "/v1638993398/color-mill-design-2023/4-Seasons_i5fakp.jpg"
           }
         },
         {
           "title": "Logos",
           "content": {
+            "link": "",
             "imageURL": "/v1642446246/color-mill-design-2023/Logos_qf4ibd.jpg"
           }
         },
         {
           "title": "Noyo Harbor Inn",
           "content": {
+            "link": "",
             "imageURL": "/v1643162096/color-mill-design-2023/NHI-Collateral_instagram_wmxuhl.jpg"
           }
         }
