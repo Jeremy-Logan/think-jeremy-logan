@@ -1,30 +1,10 @@
 import { motion } from 'framer-motion';
 import Link from 'next/link';
-import { useEffect, useRef, useState } from 'react';
+import { getCloudinaryImageUrl } from "../../utils/cloudinary";
 import Image from '../Image';
 
 export default function Navbar() {
-  const pictureRef = useRef<HTMLPictureElement>(null);
-  const [, setPageLoaded] = useState(false);
-
-  useEffect(() => {
-    if (pictureRef.current) {
-      const sources = pictureRef.current.querySelectorAll('source');
-      sources.forEach((source) => {
-        const srcset = source.srcset;
-        source.removeAttribute('srcset');
-        source.setAttribute('srcset', `${srcset}?t=${new Date().getTime()}`);
-      });
-    }
-
-    // Set `isPageLoaded` to `true` when the page finishes loading
-    window.addEventListener('load', () => setPageLoaded(true));
-
-    // Clean up the event listener
-    return () => {
-      window.removeEventListener('load', () => setPageLoaded(true));
-    };
-  }, []);
+  
 
   return (
     <>
@@ -42,17 +22,17 @@ export default function Navbar() {
                     layout='responsive'
                   />
                 </motion.a> */}
-                <picture className='h-24 w-24 ' ref={pictureRef}>
+                <picture className='h-24 w-24 ' >
                   <source
-                    srcSet='v1654091088/Color Mill Design/headerLogo_ty5dmw.gif'
+                    src={getCloudinaryImageUrl('v1654091088/color-mill-design-2023/headerLogo_ty5dmw.gif')}
                     type='image/gif'
                   />
                   <source
-                    srcSet='v1653830108/Color Mill Design/TJL-Logo_l5muds.png'
+                    srcSet={getCloudinaryImageUrl('v1653830108/color-mill-design-2023/TJL-Logo_l5muds.png')}
                     type='image/png'
                   />
                   <Image
-                    src='v1654091088/Color Mill Design/headerLogo_ty5dmw.gif'
+                    src={getCloudinaryImageUrl('v1654091088/color-mill-design-2023/headerLogo_ty5dmw.gif')}
                     width={192}
                     height={192}
                     style={{ objectFit: 'contain' }}
