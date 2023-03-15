@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import Image from "next/image";
 import { useRef } from "react";
+import { getCloudinaryImageUrl } from "../../utils/cloudinary";
 
 import "simplebar-react/dist/simplebar.min.css";
 
@@ -77,7 +78,7 @@ const ProjectCard = ({ props }: Props) => {
               >
                 <button className="relative z-0 h-full w-full">
                   <Image
-                    src={project.content.imageURL}
+                    src={getCloudinaryImageUrl(`${project.content.imageURL}`)}
                     alt={project.title}
                     fill={true}
                     style={{ objectFit: "contain" }}
