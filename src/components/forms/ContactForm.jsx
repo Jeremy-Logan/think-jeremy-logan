@@ -7,7 +7,7 @@ const ContactForm = () => {
 
   return (
     <div className='mx-auto mb-36 mt-24 flex w-screen justify-center'>
-      <div className='z-30 mx-auto flex w-[90vw] flex-col text-white sm:mt-12 md:w-[30vw]'>
+      <div className='z-30 mx-auto flex w-[90vw] flex-col text-white sm:mt-12 md:w-[60vw] xl:w-[30vw]'>
         <h3 className='text-center text-2xl font-thin '>
           Like to get in touch?
         </h3>

@@ -44,8 +44,8 @@ export default function HeroSection() {
             className=' max-w-3xl px-4 text-left text-base font-light text-white lg:text-xl'
           >
             I’m a designer and a coder, driven by the belief that exceptional
-            design elevates the world. I’m a logical thinker, thrive in
-            collaborative environments and I’m always looking for the most
+            design elevates us all. I’m a logical thinker, thrive in
+            collaborative, creative environments and I’m always looking for the most
             elegant way to solve a problem. You can view some of my work below.
           </p>
         </div>
