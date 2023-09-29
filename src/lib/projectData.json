@@ -1,123 +1,151 @@
 {
   "projectData": [
     {
-      "section": "ILLUSTRATION",
-      "projects": [
-        {
-          "title": "Mendocino Spirits Bourbon",
-          "content": {
-            "link": "",
-            "imageURL": "/v1678900661/color-mill-design-2023/bourbon-web_oivqyn.jpg"
-          }
-        },
-        {
-          "title": "Mendocino Spirits Spirit Whiskey",
-          "content": {
-            "link": "",
-            "imageURL": "/v1678900662/color-mill-design-2023/spirit-whiskey-web_ffjlh3.jpg"
-          }
-        },
-        {
-          "title": "Mendocino Spirits Dry Gin",
-          "content": {
-            "link": "",
-            "imageURL": "/v1678900662/color-mill-design-2023/dry-gin-web_re9yf6.jpg"
-          }
-        },
-
-        {
-          "title": "Mendocino Spirits Aged Gin",
-          "content": {
-            "link": "",
-            "imageURL": "/v1678899819/color-mill-design-2023/aged-gin-web_gzvw7f.jpg"
-          }
-        },
-        {
-          "title": "Mendocino Spirits Rye Malt Whiskey",
-          "content": {
-            "link": "",
-            "imageURL": "/v1678900662/color-mill-design-2023/rye-malt-web_nrzhkn.jpg"
-          }
-        },
-        {
-          "title": "Boonville Betty",
-          "content": {
-            "link": "",
-            "imageURL": "/v1641948871/color-mill-design-2023/Betty_Instagram_Not_transparent_bsqzvp.jpg"
-          }
-        },
-        {
-          "title": "Memento Mori",
-          "content": {
-            "link": "",
-            "imageURL": "/v1642285573/color-mill-design-2023/Memento_Mori_nnzpzd.jpg"
-          }
-        }
-      ]
-    },
-    {
       "section": "WEBSITES",
       "projects": [
         {
+          "id": "a",
           "title": "Color Mill Design",
           "content": {
             "link": "https://www.colormilldesign.com/",
-            "imageURL": "/v1642124086/color-mill-design-2023/colorMillDesign_jxg4fi.jpg"
+            "imageURL": "/v1695677513/color-mill-design-2023/color-mill-design_pgvcgz.jpg",
+            "description": "This is a placeholder"
           }
         },
         {
+          "id": "b",
           "title": "Mendocino Spirits",
           "content": {
             "link": "https://www.mendocinospirits.com/",
-            "imageURL": "/v1642122802/color-mill-design-2023/MS-Home-Page_fjiah5.jpg"
+            "imageURL": "/v1642122802/color-mill-design-2023/MS-Home-Page_fjiah5.jpg",
+            "description": "This is a placeholder"
           }
         },
         {
+          "id": "c",
           "title": "Fort Bragg Food Bank",
           "content": {
             "link": "https://www.fortbraggfoodbank.org/",
-            "imageURL": "/v1643161542/color-mill-design-2023/foodBank_kguvam.jpg"
+            "imageURL": "/v1643161542/color-mill-design-2023/foodBank_kguvam.jpg",
+            "description": "This is a placeholder"
           }
         },
         {
+          "id": "d",
           "title": "Redwood Coast Seniors",
           "content": {
             "link": "https://www.rcscenter.org/",
-            "imageURL": "/v1654540671/color-mill-design-2023/rcs_hr7vei.jpg"
+            "imageURL": "/v1654540671/color-mill-design-2023/rcs_hr7vei.jpg",
+            "description": "This is a placeholder"
           }
         },
         {
+          "id": "e",
           "title": "Newberger & Associates",
           "content": {
             "link": "https://www.lsndesign.com/",
-            "imageURL": "/v1641948361/color-mill-design-2023/newberger_nhbtwl.jpg"
+            "imageURL": "/v1641948361/color-mill-design-2023/newberger_nhbtwl.jpg",
+            "description": "This is a placeholder"
           }
         }
       ]
     },
-
+{
+  "section": "ILLUSTRATION",
+  "projects": [
+    {
+      "id": "f",
+      "title": "Mendocino Spirits Bourbon",
+      "content": {
+        "link": "",
+        "imageURL": "/v1678900661/color-mill-design-2023/bourbon-web_oivqyn.jpg",
+        "description": "This is a placeholder"
+      }
+    },
+    {
+      "id": "g",
+      "title": "Mendocino Spirits Spirit Whiskey",
+      "content": {
+        "link": "",
+        "imageURL": "/v1678900662/color-mill-design-2023/spirit-whiskey-web_ffjlh3.jpg",
+        "description": "This is a placeholder"
+      }
+    },
+    {
+      "id": "h",
+      "title": "Mendocino Spirits Dry Gin",
+      "content": {
+        "link": "",
+        "imageURL": "/v1678900662/color-mill-design-2023/dry-gin-web_re9yf6.jpg",
+        "description": "This is a placeholder"
+      }
+    },
+    {
+      "id": "i",
+      "title": "Mendocino Spirits Aged Gin",
+      "content": {
+        "link": "",
+        "imageURL": "/v1678899819/color-mill-design-2023/aged-gin-web_gzvw7f.jpg",
+        "description": "This is a placeholder"
+      }
+    },
+    {
+      "id": "j",
+      "title": "Mendocino Spirits Rye Malt Whiskey",
+      "content": {
+        "link": "",
+        "imageURL": "/v1678900662/color-mill-design-2023/rye-malt-web_nrzhkn.jpg",
+        "description": "This is a placeholder"
+      }
+    },
+    {
+      "id": "k",
+      "title": "Boonville Betty",
+      "content": {
+        "link": "",
+        "imageURL": "/v1641948871/color-mill-design-2023/Betty_Instagram_Not_transparent_bsqzvp.jpg",
+        "description": "This is a placeholder"
+      }
+    },
+    {
+      "id": "l",
+      "title": "Memento Mori",
+      "content": {
+        "link": "",
+        "imageURL": "/v1642285573/color-mill-design-2023/Memento_Mori_nnzpzd.jpg",
+        "description": "This is a placeholder"
+      }
+    }
+  ]
+},
     {
       "section": "GRAPHIC DESIGN",
       "projects": [
         {
+          "id": "m",
           "title": "Mendocino Spirits Bottles",
           "content": {
             "link": "",
-            "imageURL": "/v1638993398/color-mill-design-2023/4-Seasons_i5fakp.jpg"
+            "imageURL": "/v1638993398/color-mill-design-2023/4-Seasons_i5fakp.jpg",
+            "description": "This is a placeholder"
           }
         },
         {
+          "id": "n",
           "title": "Logos",
           "content": {
             "link": "",
-            "imageURL": "/v1642446246/color-mill-design-2023/Logos_qf4ibd.jpg"
+            "imageURL": "/v1642446246/color-mill-design-2023/Logos_qf4ibd.jpg",
+            "description": "This is a placeholder"
           }
         },
         {
+          "id": "o",
           "title": "Noyo Harbor Inn",
           "content": {
             "link": "",
-            "imageURL": "/v1643162096/color-mill-design-2023/NHI-Collateral_instagram_wmxuhl.jpg"
+            "imageURL": "/v1643162096/color-mill-design-2023/NHI-Collateral_instagram_wmxuhl.jpg",
+            "description": "This is a placeholder"
           }
         }
       ]

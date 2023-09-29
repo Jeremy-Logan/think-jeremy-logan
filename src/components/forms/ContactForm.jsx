@@ -76,7 +76,7 @@ const ContactForm = () => {
               </label>
               <label htmlFor='question' className='mr-2 text-xl'>
                 <h3 className='mt-4 text-xl font-light text-white'>
-                  Briefly tell me about your project goals.
+                  Leave a brief message.
                 </h3>
                 <textarea
                   type='text'

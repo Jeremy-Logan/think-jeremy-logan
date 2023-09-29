@@ -52,7 +52,7 @@ const ProjectCard = ({ props }: Props) => {
       </h2>
       <div className=" mx-auto mt-2 mb-20 h-[1px] w-[50vw] bg-white"></div>
 
-      <motion.div className="my-auto mx-auto grid h-full w-full grid-cols-1 gap-4 md:w-[65vw] md:grid-cols-2">
+      <motion.div className="my-auto mx-auto grid h-full w-full grid-cols-1 gap-4 md:w-[65vw] md:grid-cols-2 xl:w-full xl:grid-cols-3">
         {projects && projects.map((project, i) => {
           return project.content.link ? (
             <motion.div

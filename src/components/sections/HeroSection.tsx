@@ -23,14 +23,6 @@ export default function HeroSection() {
         animate={{ opacity: 1 }}
         className='mt-12 mb-0 flex w-screen sm:h-12 xl:mt-20 xl:mb-12 xl:h-[40vh]'
       >
-        {/* <div className='relative mx-auto mb-6 h-36 w-36 justify-center lg:h-48 lg:w-48'>
-          <Image
-            src='v1654110747/Color%20Mill%20Design/PortraitBlue_wgxyhp.png'
-            alt='self portrait'
-            layout='fill'
-            objectFit='contain'
-          />
-        </div> */}
         <div className='md:w-5/12 xl:w-5/12 2xl:w-7/12 '></div>
         <div className='2xl:mr-30 mx-4 md:w-7/12 lg:mx-0 lg:mr-24 xl:w-7/12 2xl:w-5/12'>
           <h1
