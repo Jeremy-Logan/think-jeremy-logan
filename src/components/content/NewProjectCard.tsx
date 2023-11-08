@@ -1,107 +1,164 @@
-import React, { useState, useRef  } from 'react'
-import { motion, type Variants } from 'framer-motion'
-import Image from 'next/image'
-import { getCloudinaryImageUrl } from '../../utils/cloudinary'
+import styled, { css } from "styled-components";
+import { motion } from "framer-motion";
+import { Fragment, useRef, useState } from "react";
+import { getCloudinaryImageUrl } from "../../utils/cloudinary";
 
-type Props = {
-    title: string
-    id: string
-    content: {
-        link: string
-        imageURL: string
-        description: string
+type ProjectProps = {
+        title: string;
+        subtitle: string;
+        id: string;
+        content: {
+            link?: string;
+            imageURL: string;
+            description: string;
+        };
     }
+
+
+type CardLinkProps = {
+    open: boolean;
+    layout: string;
+};
+
+type CardImageProps = {
+    open: boolean;
+    layout: string;
+};
+
+type CardHeaderProps = {
+    open: boolean;
+    layout: string;
 }
 
-const container: Variants = {
-    open: {
-        width: 'min(40rem, 95%)',
-        height: "calc(100% - 10rem)",
-        overflowY: 'auto',
-        overflowX: 'hidden',
-        position: 'fixed',
-        zIndex: 30,
-        top: 0,
-        right: 0,
-        bottom: 0,
-        left: 0,
-        margin: 'auto',
-        display: 'flex',
-        justifyContent: 'flex-start',
-        flexDirection: 'column',
-        backgroundColor: 'rgba(0,0,0,0.9)',
-    },
-    closed: {
-        transition: {
-            duration: 0.5,
-        },
-        height: "100%",
-        width: "100%",
-        transitionEnd: {
-            zIndex: 0, 
-},
-
-    },
+type CardSubtitleProps = {
+    open: boolean;
+    layout: string;
 }
 
-export default function NewProjectCard(props: Props) {
-    const [isOpen, setIsOpen] = useState(false)
-    const [cardDimensions, setCardDimensions] = useState({ width: 0, height: 0 })
-    const card = useRef(null)
+type CardDescriptionProps = {
+    open: boolean;
+    layout: string;
+}
+
+export default function NewProjectCard(props: ProjectProps) {
+    const [open, setOpen] = useState(false);
+    const [cardDimensions, setCardDimensions] = useState({ width: 0, height: 0 });
+    const card = useRef<HTMLDivElement>(null);
+
     return (
-        <>
-            <motion.div
+        <Fragment>
+            
+            <CardLink
                 ref={card}
-                initial={'closed'}
-                animate={isOpen ? 'open' : 'closed'}
-                className=''
-                variants={container}
-                layout
+                open={open}
+                layout="position"
                 onClick={() => {
-                    setIsOpen(true)
-                    if (!isOpen) {
+                    setOpen(true);
+                    if (!open && card.current) {
                         setCardDimensions({
-                            width: (card.current as HTMLElement | null)?.clientWidth || 0,
-                            height: (card.current as unknown as HTMLElement)?.clientHeight ?? 0,
-                        })
+                            width: card.current.clientWidth,
+                            height: card.current.clientHeight,
+                        });
                     }
                 }}
             >
-                <motion.div
-                    transition={{ duration: 0.5 }}
-                    className='relative z-30 aspect-square w-full '
-                >
-                    <Image
-                        src={getCloudinaryImageUrl(`${props.content.imageURL}`)}
-                        alt={props.title}
-                        fill={true}
-                        style={{ objectFit: 'contain' }}
-                        sizes='(max-width: 768px) 45vw,'
-                    />
+                <CardImage
+                    layout="preserve-aspect"
+                    src={getCloudinaryImageUrl(`${props.content.imageURL}`)}
+                />
+                <motion.h2 layout="position" className={`text-white  text-[1.75em] font-thin ${open ? 'mt-[2rem] mx-[1.5rem]' : 'mt-[1rem] mx-0'}`}>
+                    {props.title}
+                </motion.h2>
+                <motion.div layout="position" className={`text-white font-semibold ${open ? 'mx-[1.5rem]' : 'mx-0'}`}>
+                    {props.subtitle}
                 </motion.div>
-                <motion.h3 className='text-white text-2xl '>{props.title}</motion.h3>
-                {isOpen && (
-                    <motion.p initial={{ opacity: 0 }} animate={{ opacity: 1 }} className=' bg-black text-white'>
-                        {props.content.description}
+
+                {open && (
+                    <Fragment>
+                    <motion.p className="text-lg text-white my-[1.5rem] mx-[1.5rem]" initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
+                            {props.content.description}<br className='m-2'/>{props.content.link && (<a className='text-blue-500 text-lg' href={props.content.link}>Click here to view the site</a>)}
                     </motion.p>
+                    
+                    </Fragment>
                 )}
-            </motion.div>
-            {isOpen && (
-                <>
-                    <div
+            </CardLink>
+            {open && (
+                <Fragment>
+                    <div 
                         style={{
                             width: cardDimensions.width,
                             height: cardDimensions.height,
-                        }}
+                        }} 
                     ></div>
-                    <motion.div
+                    <CardBackground
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
-                        className='height-[100vh] fixed top-0 left-0 right-0 bottom-0 z-10 w-[100vw] bg-black bg-opacity-50'
-                        onClick={() => setIsOpen(false)}
-                    />
-                </>
+                        onClick={() => setOpen(false)}
+                    ></CardBackground><CardCloseButton initial={{ opacity: 0 }}
+                        animate={{ opacity: 0.6 }} 
+                        onClick={() => setOpen(false)} >X</CardCloseButton>
+                </Fragment>
             )}
-        </>
-    )
+        </Fragment>
+    );
 }
+
+const CardLink = styled(motion.div) <CardLinkProps>`
+    height: 100%;
+    width: 100%;
+    background: rgba(31, 33, 70, 0);
+    ${(props) =>
+        props.open &&
+        css`
+        width: min(40rem, 95%);
+        height: calc(100% - 10rem);
+        overflow-y: auto;
+        overflow-x: hidden;
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        margin: auto;
+        z-index: 10;
+        display: flex;
+        justify-content: flex-start;
+        flex-direction: column;
+        background: rgba(31, 33, 70, 1);
+    `}
+`;
+
+const CardImage = styled(motion.img) <CardImageProps>`
+    width: 100%;
+    height: auto;
+`;
+
+const CardBackground = styled(motion.div)`
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    z-index: 9;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background: rgba(10, 10, 10, 0.7);
+`;
+
+const CardCloseButton = styled(motion.button)`
+    top: 15px;
+    right: 15px; 
+    z-index: 10;
+    height: 2rem;
+    width: 2rem;
+    margin: 5;
+    position: fixed;
+    background: #ffffff;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    border-radius: 50%;
+    color: #000000;
+    font-weight: 700; 
+`;
+

@@ -8,7 +8,6 @@ interface ImageProps {
   style?: React.CSSProperties;
   width?: number;
   height?: number;
- 
   quality?: number;
 }
 

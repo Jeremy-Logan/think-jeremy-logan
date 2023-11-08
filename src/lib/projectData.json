@@ -6,46 +6,61 @@
         {
           "id": "a",
           "title": "Color Mill Design",
+          "subtitle": "Brand Strategy, Prototyping, Web Design & Development",
           "content": {
             "link": "https://www.colormilldesign.com/",
             "imageURL": "/v1695677513/color-mill-design-2023/color-mill-design_pgvcgz.jpg",
-            "description": "This is a placeholder"
+            "description": "Designed in Figma then built using Next.js, Typescript, Tailwind CSS, Framer-Motion, and Cloudinary for image hosting. This site showcases the brand design and web development work of Color Mill Design, a studio that I helped found in 2015."
           }
         },
         {
           "id": "b",
-          "title": "Mendocino Spirits",
+          "title": "Point Arena Lighthouse",
+          "subtitle": "Brand Strategy, Web Design & Development, Custom CMS Integration",
           "content": {
-            "link": "https://www.mendocinospirits.com/",
-            "imageURL": "/v1642122802/color-mill-design-2023/MS-Home-Page_fjiah5.jpg",
-            "description": "This is a placeholder"
+            "link": "https://pointarenalighthouse.com/",
+            "imageURL": "/v1695678649/color-mill-design-2023/point-arena-lighthouse_zyjqwv.jpg",
+            "description": "After a full brand refresh, I designed and developed a new website for the Point Arena Lighthouse. The site was prototyped in Figma then built using Next.js, Typescript, and Tailwind CSS, with a fully customized content managment in Sanity.io. The site also features a custom integration with Innroad for booking and lodging, and Paypal for collecting donations."
           }
         },
         {
           "id": "c",
-          "title": "Fort Bragg Food Bank",
+          "title": "Mendocino Spirits",
+          "subtitle": "Brand Strategy, Web Design & Development",
           "content": {
-            "link": "https://www.fortbraggfoodbank.org/",
-            "imageURL": "/v1643161542/color-mill-design-2023/foodBank_kguvam.jpg",
-            "description": "This is a placeholder"
+            "link": "https://www.mendocinospirits.com/",
+            "imageURL": "/v1642122802/color-mill-design-2023/MS-Home-Page_fjiah5.jpg",
+            "description": "My team and I started with a full brand strategy package for Mendocino Spirits, then designed and developed a new website for them. The site was built using Next.js, and Tailwind CSS, and integrates with a Shopify backend for online sales. I also designed all of the bottle labels for their spirits which you can see further down the page."
           }
         },
         {
           "id": "d",
-          "title": "Redwood Coast Seniors",
+          "title": "Fort Bragg Food Bank",
+          "subtitle": "Web Design & Development",
           "content": {
-            "link": "https://www.rcscenter.org/",
-            "imageURL": "/v1654540671/color-mill-design-2023/rcs_hr7vei.jpg",
-            "description": "This is a placeholder"
+            "link": "https://www.fortbraggfoodbank.org/",
+            "imageURL": "/v1643161542/color-mill-design-2023/foodBank_kguvam.jpg",
+            "description": "Designed in Figma then built using Next.js, Tailwind CSS, Prisma ORM, and Supabase Auth with a fully custom CMS built in Sanity.io. This site features custom integrations with Bloomerang, a CRM that specializes in nonprofits, for donations and volunteer scheduling, and a private page for board members that uses Supabase and Prisma for authorization."
           }
         },
         {
           "id": "e",
+          "title": "Redwood Coast Seniors",
+          "subtitle": "Brand Strategy, Web Design & Development",
+          "content": {
+            "link": "https://www.rcscenter.org/",
+            "imageURL": "/v1654540671/color-mill-design-2023/rcs_hr7vei.jpg",
+            "description": "My team and I started with a full brand strategy package then I went on to design and develop a new website for Redwood Coast Seniors. The site was prototyped in Figma and built using Next.js, and Tailwind CSS, integrating with the Sanity.io CMS and Paypal for donations. Also of note are several calendars on the site which integrate with the Redwood Coast Seniors Google calendar events through the Google Calendar API."
+          }
+        },
+        {
+          "id": "f",
           "title": "Newberger & Associates",
+          "subtitle": "Web Design & Development",
           "content": {
             "link": "https://www.lsndesign.com/",
             "imageURL": "/v1641948361/color-mill-design-2023/newberger_nhbtwl.jpg",
-            "description": "This is a placeholder"
+            "description": "Designed in Figma then built using Next.js, Tailwind CSS, and cloudinary for image hosting."
           }
         }
       ]
@@ -56,64 +71,71 @@
     {
       "id": "f",
       "title": "Mendocino Spirits Bourbon",
+      "subtitle": "Brand Strategy, Label Design & Illustration",
       "content": {
         "link": "",
         "imageURL": "/v1678900661/color-mill-design-2023/bourbon-web_oivqyn.jpg",
-        "description": "This is a placeholder"
+        "description": "Over the years I've created a number of illustrations for Mendocino Spirits. The series started with this Bourbon label, and has since expanded to include a number of other spirits."
       }
     },
     {
       "id": "g",
       "title": "Mendocino Spirits Spirit Whiskey",
+      "subtitle": "Brand Strategy, Label Design & Illustration",
       "content": {
         "link": "",
         "imageURL": "/v1678900662/color-mill-design-2023/spirit-whiskey-web_ffjlh3.jpg",
-        "description": "This is a placeholder"
+        "description": "Over the years I've created a number of illustrations for Mendocino Spirits."
       }
     },
     {
       "id": "h",
       "title": "Mendocino Spirits Dry Gin",
+      "subtitle": "Brand Strategy, Label Design & Illustration",
       "content": {
         "link": "",
         "imageURL": "/v1678900662/color-mill-design-2023/dry-gin-web_re9yf6.jpg",
-        "description": "This is a placeholder"
+        "description": "Over the years I've created a number of illustrations for Mendocino Spirits."
       }
     },
     {
       "id": "i",
       "title": "Mendocino Spirits Aged Gin",
+      "subtitle": "Brand Strategy, Label Design & Illustration",
       "content": {
         "link": "",
         "imageURL": "/v1678899819/color-mill-design-2023/aged-gin-web_gzvw7f.jpg",
-        "description": "This is a placeholder"
+        "description": "Over the years I've created a number of illustrations for Mendocino Spirits."
       }
     },
     {
       "id": "j",
       "title": "Mendocino Spirits Rye Malt Whiskey",
+      "subtitle": "Brand Strategy, Label Design & Illustration",
       "content": {
         "link": "",
         "imageURL": "/v1678900662/color-mill-design-2023/rye-malt-web_nrzhkn.jpg",
-        "description": "This is a placeholder"
+        "description": "Over the years I've created a number of illustrations for Mendocino Spirits."
       }
     },
     {
       "id": "k",
       "title": "Boonville Betty",
+      "subtitle": "Label Design & Illustration",
       "content": {
         "link": "",
         "imageURL": "/v1641948871/color-mill-design-2023/Betty_Instagram_Not_transparent_bsqzvp.jpg",
-        "description": "This is a placeholder"
+        "description": "I had a lot of fun with this pinup inspired illustration for a local chef who wanted to bring her famous hot sauces to market."
       }
     },
     {
       "id": "l",
       "title": "Memento Mori",
+      "subtitle": "Illustration",
       "content": {
         "link": "",
         "imageURL": "/v1642285573/color-mill-design-2023/Memento_Mori_nnzpzd.jpg",
-        "description": "This is a placeholder"
+        "description": "Every year I create a new illustration for my company's calendar give away. This is the 2022 edition."
       }
     }
   ]
@@ -124,28 +146,31 @@
         {
           "id": "m",
           "title": "Mendocino Spirits Bottles",
+          "subtitle": "Brand Strategy, Label Design & Illustration",
           "content": {
             "link": "",
             "imageURL": "/v1638993398/color-mill-design-2023/4-Seasons_i5fakp.jpg",
-            "description": "This is a placeholder"
+            "description": "Over the years I've created a number of illustrations for Mendocino Spirits."
           }
         },
         {
           "id": "n",
           "title": "Logos",
+          "subtitle": "Graphic Design and Illustration",
           "content": {
             "link": "",
             "imageURL": "/v1642446246/color-mill-design-2023/Logos_qf4ibd.jpg",
-            "description": "This is a placeholder"
+            "description": "This is a selection of some of the logos I've done over the years."
           }
         },
         {
           "id": "o",
           "title": "Noyo Harbor Inn",
+          "subtitle": "Brand Strategy, Graphic Design",
           "content": {
             "link": "",
             "imageURL": "/v1643162096/color-mill-design-2023/NHI-Collateral_instagram_wmxuhl.jpg",
-            "description": "This is a placeholder"
+            "description": "My team and I helped the Noyo Harbor in with a full brand refresh, including a new logo, and a number of collateral pieces."
           }
         }
       ]
