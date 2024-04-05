@@ -3,62 +3,62 @@ const skills = [
     {
         name: 'Javascript',
         imageUrl:
-            'https://upload.wikimedia.org/wikipedia/commons/9/99/Unofficial_JavaScript_logo_2.svg',
+            '/images/Unofficial_JavaScript_logo_2.svg',
     },
     {
         name: 'React',
         imageUrl:
-            'https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg',
+            '/images/React-icon.svg',
     },
     {
         name: 'NextJS',
         imageUrl:
-            'https://www.svgrepo.com/show/354113/nextjs-icon.svg',
+            '/images/nextjs-icon.svg',
     },
     {
         name: 'Typescript',
         imageUrl:
-            'https://upload.wikimedia.org/wikipedia/commons/4/4c/Typescript_logo_2020.svg',
+            '/images/Typescript_logo_2020.svg',
     },
     {
         name: 'TailwindCSS',
         imageUrl:
-            'https://upload.wikimedia.org/wikipedia/commons/d/d5/Tailwind_CSS_Logo.svg',
+            '/images/Tailwind_CSS_Logo.svg',
     },
     {
         name: 'Figma',
         imageUrl:
-            'https://upload.wikimedia.org/wikipedia/commons/3/33/Figma-logo.svg',
+            '/images/Figma-logo.svg',
     },
     {
         name: 'Illustrator',
         imageUrl:
-            'https://upload.wikimedia.org/wikipedia/commons/7/75/Adobe_Illustrator_CC_icon.png',
+            '/images/Adobe_Illustrator_CC_icon.png',
     },   
     {
         name: 'InDesign',
         imageUrl:
-            'https://upload.wikimedia.org/wikipedia/commons/4/48/Adobe_InDesign_CC_icon.svg',
+            '/images/Adobe_InDesign_CC_icon.svg',
     },
     {
         name: 'Photoshop',
         imageUrl:
-            'https://upload.wikimedia.org/wikipedia/commons/a/af/Adobe_Photoshop_CC_icon.svg',
+            '/images/Adobe_Photoshop_CC_icon.svg',
     }, 
     {
         name: 'After Effects',
         imageUrl:
-            'https://upload.wikimedia.org/wikipedia/commons/c/cb/Adobe_After_Effects_CC_icon.svg',
+            '/images/Adobe_After_Effects_CC_icon.svg',
     },
     {
         name: 'AWS',
         imageUrl:
-            'https://upload.wikimedia.org/wikipedia/commons/9/93/Amazon_Web_Services_Logo.svg',
+            '/images/Amazon_Web_Services_Logo.svg',
     },
     {
         name: 'Azure',
         imageUrl:
-            'https://upload.wikimedia.org/wikipedia/commons/f/fa/Microsoft_Azure.svg',
+            '/images/Microsoft_Azure.svg',
     },
 ]
 
