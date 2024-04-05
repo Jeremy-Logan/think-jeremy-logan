@@ -107,6 +107,7 @@ const CardLink = styled(motion.div) <CardLinkProps>`
     height: 100%;
     width: 100%;
     background: rgba(31, 33, 70, 0);
+    cursor: pointer;
     ${(props) =>
         props.open &&
         css`
