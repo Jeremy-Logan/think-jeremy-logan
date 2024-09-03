@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import Goo from 'gooey-react';
+import Goo from '../../utils/goo';
 import * as React from 'react';
 
 export default function BlobBackground() {
