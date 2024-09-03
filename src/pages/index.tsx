@@ -6,6 +6,8 @@ import HeroSection from '@/components/sections/HeroSection';
 import ProjectSection from '@/components/sections/ProjectSection';
 import SkillsSection from '@/components/sections/SkillsSection';
 import Seo from '@/components/Seo';
+import TestSection from '@/components/sections/TestSection';
+import PortfolioSection from '@/components/sections/PortfolioSection';
 
 
 const Home: NextPage = () => {
@@ -14,9 +16,9 @@ const Home: NextPage = () => {
       <Seo />
 
       <main className='snap-y snap-proximity overflow-hidden'>
+        {/* <TestSection /> */}
         <HeroSection />
-        
-        <ProjectSection />
+        <PortfolioSection />
         <SkillsSection />
         <ContactSection />
         <BlobBackground />

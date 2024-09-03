@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import { getCloudinaryImageUrl } from "../../utils/cloudinary";
-import Image from '../Image';
+import Image from 'next/image';
 
 export default function Navbar() {
   
@@ -37,7 +37,9 @@ export default function Navbar() {
                     height={192}
                     style={{ objectFit: 'contain' }}
                     sizes="(max-width: 192px) 192px,"
-                    alt='logo' fill={false}                    
+                    alt='logo' 
+                    fill={false}
+                                        
                   />
                 </picture>
               </Link>

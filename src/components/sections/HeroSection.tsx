@@ -33,9 +33,9 @@ export default function HeroSection() {
           </h1>
           <p
             style={{ lineHeight: '1.75em' }}
-            className=' max-w-3xl px-4 text-left text-base font-light text-white lg:text-xl'
+            className=' max-w-3xl px-4 text-left text-base font-base text-white lg:text-xl'
           >
-            I’m a designer and a coder, driven by the belief that exceptional
+            I’m a front-end developer and a visual designer, driven by the belief that exceptional
             design elevates us all. I’m a logical thinker, thrive in
             collaborative, creative environments and I’m always looking for the most
             elegant way to solve a problem. You can view some of my work below.

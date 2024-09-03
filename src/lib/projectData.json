@@ -5,42 +5,114 @@
       "projects": [
         {
           "id": "a",
+          "title": "Mendo Food Network",
+          "subtitle": "Brand Strategy, Prototyping, Web Design & Development",
+          "content": {
+            "link": "https://mendofood.org",
+            "imageURL": "/v1695677513/color-mill-design-2023/color-mill-design_pgvcgz.jpg",
+            "description": "Designed in Figma then built using Next.js, Typescript, Tailwind CSS, Sanity.io CMS, and Framer-Motion. \n\n The client came to us with the need to create a new site for their organization to accompany their new logo and brand refresh. I worked with the client to create a new visual identity and then prototyped the site in Figma. After approval, I built the site using Next.js, Typescript, Tailwind CSS, Sanity.io CMS, and Framer-Motion.",
+            "features": [
+              {
+                "title": "Custom Map Integration",
+                "description": "One of the main purposes of the site is to help people find locations where they can get access to healthy food. To accompish this I created a custom map integration that allows users to search for food banks, food pantries, and other food access points in Mendocino County.",
+                "imageURL": "/v1725311770/think-jeremy-logan/MFNMap_fojfj0.gif",
+                "color": "#55baea"
+              },
+              {
+                "title": "Content Management with Live Visual Editing",
+                "description": "I built the site using Vercel and the Sanity.io CMS with incremental static regeneration to provide an efficient publishing pipeline and an intuitive, live visual editing user experience. Posts are fetched from the Sanity content lake and published to the site using Next.js and React Server Components.",
+                "imageURL": "v1725312785/think-jeremy-logan/MFN-CMS_umgykv.gif",
+                "color": "#90F091"
+              },
+              {
+                "title": "One-time and recurring donations to multiple campaigns with Stripe",
+                "description": "Donations are a major source of revenue for the Mendo Food Network. I integrated Stripe to allow users to make one-time and recurring donations to the organization's various campaigns. ",
+                "imageURL": "/v1725315551/think-jeremy-logan/MFNDonations_icyjhy.gif",
+                "color": "#A70BB8"
+              },
+              {
+                "title": "Firebase Authentication",
+                "description": "The site uses Firebase Authentication to allow authorized users to access portected pages and content such as the board resources portal. Within the board portal I've integrated the calendar API from Google Calendar to allow board members to see upcoming events and meetings.",
+                "imageURL": "/v1725315785/think-jeremy-logan/MFNAuth_yzupng.gif",
+                "color": "#FCA548"
+              },
+              {
+                "title": "Built with TypeScript",
+                "description": "I use TypeScript whenever possible. It's a great language for building scalable applications and catching errors early.",
+                "imageURL": "/v1725232685/think-jeremy-logan/TypeScript_ask8wu.png",
+                "color": "#F2545B"
+              }
+            ]
+          }
+        },
+        {
+          "id": "b",
           "title": "Color Mill Design",
           "subtitle": "Brand Strategy, Prototyping, Web Design & Development",
           "content": {
             "link": "https://www.colormilldesign.com/",
             "imageURL": "/v1695677513/color-mill-design-2023/color-mill-design_pgvcgz.jpg",
-            "description": "Designed in Figma then built using Next.js, Typescript, Tailwind CSS, Framer-Motion, and Cloudinary for image hosting. This site showcases the brand design and web development work of Color Mill Design, a studio that I helped found in 2015."
+            "description": "Designed in Figma then built using Next.js, Typescript, Tailwind CSS, Framer-Motion, and Cloudinary for image hosting. This site showcases the brand design and web development work of Color Mill Design, a studio that I helped found in 2015.",
+            "features": [
+              {
+                "title": "Animated Elements",
+                "description": "The site features a number of animated elements. Some, such as the logo were hand animated in After Effects and imported into the project. Others were created either procedurally with Framer-motion.",
+                "imageURL": "/v1725231145/think-jeremy-logan/colorMillDesignAnimatedElements_dpa5mv.gif",
+                "color": "#55baea"
+              },
+              {
+                "title": "React Server Components and Incremental Static Regeneration",
+                "description": "The site uses the Sanity.io CMS with ISR to provide an efficient publishing pipeline and an intuitive user experience. Posts are fetched from the Sanity content lake and published to the site using Next.js and React Server Components.",
+                "imageURL": "/v1725233705/think-jeremy-logan/ColorMillDesignBlog_q7kkt2.png",
+                "color": "#90F091"
+              },
+              {
+                "title": "TypeScript",
+                "description": "I use TypeScript whenever possible. It's a great language for building scalable applications and catching errors early.",
+                "imageURL": "/v1725232685/think-jeremy-logan/TypeScript_ask8wu.png",
+                "color": "#F2545B"
+              }
+            ]
           }
         },
         {
-          "id": "b",
+          "id": "c",
           "title": "Point Arena Lighthouse",
           "subtitle": "Brand Strategy, Web Design & Development, Custom CMS Integration",
           "content": {
             "link": "https://pointarenalighthouse.com/",
             "imageURL": "/v1695678649/color-mill-design-2023/point-arena-lighthouse_zyjqwv.jpg",
-            "description": "After a full brand refresh, I designed and developed a new website for the Point Arena Lighthouse. The site was prototyped in Figma then built using Next.js, Typescript, and Tailwind CSS, with a fully customized content managment in Sanity.io. The site also features a custom integration with Innroad for booking and lodging, and Paypal for collecting donations."
+            "description": "After a full brand refresh, I designed and developed a new website for the Point Arena Lighthouse. The site was prototyped in Figma then built using Next.js, Typescript, and Tailwind CSS, with a fully customized content managment in Sanity.io. The site also features a custom integration with Innroad for booking and lodging, and Paypal for collecting donations.",
+          "features": [
+            {
+              "title": "Design System and Prototyping in Figma",
+              "description": "The site features a number of animated elements. Some, such as the logo were hand animated in After Effects and imported into the project. Others were created either procedurally with Framer-motion.",
+              "imageURL": "/v1695678649/color-mill-design-2023/point-arena-lighthouse_zyjqwv.jpg",
+              "color": "#55baea"
+            },
+            {
+              "title": "Booking Engine API Integration",
+              "description": "The site uses the Sanity.io CMS with ISR to provide an efficient publishing pipeline and an intuitive user experience. Posts are fetched from the Sanity content lake and published to the site using Next.js and React Server Components.",
+              "imageURL": "/v1725321949/think-jeremy-logan/PA-lodging_snlcae.png",
+              "color": "#90F091"
+            },
+            {
+              "title": "Custom CMS with Sanity.io",
+              "description": "I used Sanity.io to create a custom CMS for the Point Arena Lighthouse. The CMS allows the client to easily add and edit content to the site.",
+              "imageURL": "/v1695678649/color-mill-design-2023/point-arena-lighthouse_zyjqwv.jpg",
+              "color": "#F2545B"
+            }
+          ]
           }
         },
         {
-          "id": "c",
+          "id": "d",
           "title": "Mendocino Spirits",
           "subtitle": "Brand Strategy, Web Design & Development",
           "content": {
             "link": "https://www.mendocinospirits.com/",
             "imageURL": "/v1642122802/color-mill-design-2023/MS-Home-Page_fjiah5.jpg",
             "description": "My team and I started with a full brand strategy package for Mendocino Spirits, then designed and developed a new website for them. The site was built using Next.js, and Tailwind CSS, and integrates with a Shopify backend for online sales. I also designed all of the bottle labels for their spirits which you can see further down the page."
-          }
-        },
-        {
-          "id": "d",
-          "title": "Fort Bragg Food Bank",
-          "subtitle": "Web Design & Development",
-          "content": {
-            "link": "https://www.fortbraggfoodbank.org/",
-            "imageURL": "/v1643161542/color-mill-design-2023/foodBank_kguvam.jpg",
-            "description": "Designed in Figma then built using Next.js, Tailwind CSS, Prisma ORM, and Supabase Auth with a fully custom CMS built in Sanity.io. This site features custom integrations with Bloomerang, a CRM that specializes in nonprofits, for donations and volunteer scheduling, and a private page for board members that uses Supabase and Prisma for authorization."
           }
         },
         {

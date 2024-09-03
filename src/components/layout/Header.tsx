@@ -8,7 +8,7 @@ export default function Header() {
     <motion.header
       initial={{ scale: 0.95, opacity: 0 }}
       animate={{ scale: 1, opacity: 1 }}
-      className='backdrop-saturate-75 sticky top-0 z-10 overflow-hidden border-b-[1px] border-b-blue-900/60 bg-gradient-to-r from-blue-700/20 to-blue-900/10 shadow-xl shadow-blue-700/10 backdrop-blur-xl -backdrop-hue-rotate-15'
+      className='backdrop-saturate-75 sticky top-0 z-20 overflow-hidden border-b-[1px] border-b-blue-900/60 bg-gradient-to-r from-blue-700/20 to-blue-900/10 shadow-xl shadow-blue-700/10 backdrop-blur-xl -backdrop-hue-rotate-15'
     >
       <Navbar />
     </motion.header>
