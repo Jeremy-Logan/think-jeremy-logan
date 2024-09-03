@@ -1,4 +1,4 @@
-import { Dialog, Transition } from '@headlessui/react';
+import { Dialog, Transition, TransitionChild, DialogBackdrop } from '@headlessui/react';
 import { XMarkIcon } from '@heroicons/react/24/solid';
 import { motion } from 'framer-motion';
 import Image from '../Image';
@@ -42,7 +42,7 @@ const ImageModal = ({ project }: Props) => {
           onClose={setOpenModal}
         >
           <div className='flex min-h-screen items-end justify-center px-4 pt-4 pb-20 text-center sm:block sm:p-0 sm:pt-12'>
-            <Transition.Child
+            <TransitionChild
               as={Fragment}
               enter='ease-out duration-300'
               enterFrom='opacity-0'
@@ -51,8 +51,8 @@ const ImageModal = ({ project }: Props) => {
               leaveFrom='opacity-100'
               leaveTo='opacity-0'
             >
-              <Dialog.Overlay className='backdrop-saturate-75 fixed inset-0 bg-gradient-to-br from-sky-500/20 to-sky-200/10 backdrop-blur-xl -backdrop-hue-rotate-15 transition-opacity' />
-            </Transition.Child>
+              <DialogBackdrop className='backdrop-saturate-75 fixed inset-0 bg-gradient-to-br from-sky-500/20 to-sky-200/10 backdrop-blur-xl -backdrop-hue-rotate-15 transition-opacity' />
+            </TransitionChild>
 
             {/* This element is to trick the browser into centering the modal contents. */}
             <span

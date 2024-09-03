@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "build": "next build && next export",
+    "build": "next build",
     "dev": "next dev",
     "lint": "next lint",
     "start": "next start"
@@ -17,7 +17,7 @@
     "framer-motion": "^10.3.2",
     "lodash": "^4.17.21",
     "next": "^14.2.5",
-    "next-cloudinary": "^4.0.0",
+    "next-cloudinary": "^6.11.0",
     "popmotion": "^11.0.5",
     "react": "18.2.0",
     "react-dom": "18.2.0",
