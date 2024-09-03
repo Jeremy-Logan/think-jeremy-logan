@@ -10,35 +10,35 @@
           "content": {
             "link": "https://mendofood.org",
             "imageURL": "/v1695677513/color-mill-design-2023/color-mill-design_pgvcgz.jpg",
-            "description": "Designed in Figma then built using Next.js, Typescript, Tailwind CSS, Sanity.io CMS, and Framer-Motion. \n\n The client came to us with the need to create a new site for their organization to accompany their new logo and brand refresh. I worked with the client to create a new visual identity and then prototyped the site in Figma. After approval, I built the site using Next.js, Typescript, Tailwind CSS, Sanity.io CMS, and Framer-Motion.",
+            "description": "When Mendo Food Network approached me with their new logo and brand refresh, I saw an opportunity to create a website that would truly serve their mission. I started by prototyping the site in Figma, collaborating closely with the client to ensure the design matched their vision. Once approved, I built the site using Next.js, TypeScript, and Tailwind CSS. To make content management easy for the client, I integrated Sanity.io CMS. I also added Framer-Motion animations to enhance user engagement.",
             "features": [
               {
                 "title": "Custom Map Integration",
-                "description": "One of the main purposes of the site is to help people find locations where they can get access to healthy food. To accompish this I created a custom map integration that allows users to search for food banks, food pantries, and other food access points in Mendocino County.",
+                "description": "Understanding that locating food resources was crucial for users, I developed a custom interactive map. I designed this feature to help people easily find food banks, pantries, and other food access points across Mendocino County. This directly supported the organization's goal of improving food accessibility in the community.",
                 "imageURL": "/v1725311770/think-jeremy-logan/MFNMap_fojfj0.gif",
                 "color": "#55baea"
               },
               {
                 "title": "Content Management with Live Visual Editing",
-                "description": "I built the site using Vercel and the Sanity.io CMS with incremental static regeneration to provide an efficient publishing pipeline and an intuitive, live visual editing user experience. Posts are fetched from the Sanity content lake and published to the site using Next.js and React Server Components.",
+                "description": "To empower the Mendo Food Network team, I implemented Sanity.io CMS with Vercel's incremental static regeneration. This setup allows the staff to update content in real-time with a visual editor. I chose Next.js and React Server Components to ensure fast page loads and maintain good SEO performance, balancing ease of use for the client with a smooth experience for site visitors.",
                 "imageURL": "v1725312785/think-jeremy-logan/MFN-CMS_umgykv.gif",
                 "color": "#90F091"
               },
               {
                 "title": "One-time and recurring donations to multiple campaigns with Stripe",
-                "description": "Donations are a major source of revenue for the Mendo Food Network. I integrated Stripe to allow users to make one-time and recurring donations to the organization's various campaigns. ",
+                "description": "Recognizing the importance of donations for Mendo Food Network, I integrated Stripe for handling contributions and built custom webhooks to provide communication between Stripe and their CRM. I set up the system to allow both one-time and recurring donations to various campaigns, giving the organization flexible options for fundraising.",
                 "imageURL": "/v1725315551/think-jeremy-logan/MFNDonations_icyjhy.gif",
                 "color": "#A70BB8"
               },
               {
                 "title": "Firebase Authentication",
-                "description": "The site uses Firebase Authentication to allow authorized users to access portected pages and content such as the board resources portal. Within the board portal I've integrated the calendar API from Google Calendar to allow board members to see upcoming events and meetings.",
+                "description": "To create a secure space for board members, I implemented Firebase Authentication. This allows authorized users to access protected pages like the board resources portal. Within this portal, I integrated the Google Calendar API to display upcoming events and meetings, streamlining communication for board members.",
                 "imageURL": "/v1725315785/think-jeremy-logan/MFNAuth_yzupng.gif",
                 "color": "#FCA548"
               },
               {
                 "title": "Built with TypeScript",
-                "description": "I use TypeScript whenever possible. It's a great language for building scalable applications and catching errors early.",
+                "description": "I chose to use TypeScript throughout the project to ensure code quality and maintainability. This decision helps catch errors early in the development process and makes it easier to scale and modify the site in the future.",
                 "imageURL": "/v1725232685/think-jeremy-logan/TypeScript_ask8wu.png",
                 "color": "#F2545B"
               }
@@ -52,23 +52,23 @@
           "content": {
             "link": "https://www.colormilldesign.com/",
             "imageURL": "/v1695677513/color-mill-design-2023/color-mill-design_pgvcgz.jpg",
-            "description": "Designed in Figma then built using Next.js, Typescript, Tailwind CSS, Framer-Motion, and Cloudinary for image hosting. This site showcases the brand design and web development work of Color Mill Design, a studio that I helped found in 2015.",
-            "features": [
+            "description": "As a co-founder of Color Mill Design, I took on the challenge of creating our studio's showcase website. I wanted to demonstrate our capabilities through both design and functionality. I started by designing the site in Figma, then built it using Next.js, TypeScript, and Tailwind CSS. To add visual interest, I incorporated Framer-Motion for animations. For efficient image management, I set up Cloudinary for hosting.",
+              "features": [
               {
                 "title": "Animated Elements",
-                "description": "The site features a number of animated elements. Some, such as the logo were hand animated in After Effects and imported into the project. Others were created either procedurally with Framer-motion.",
+                "description": "To bring the site to life, I created various animated elements. For complex animations like our logo, I used After Effects and imported them into the site. For other elements, I used Framer-motion to create dynamic, code-based animations. This approach allowed me to balance performance with visual appeal.",
                 "imageURL": "/v1725231145/think-jeremy-logan/colorMillDesignAnimatedElements_dpa5mv.gif",
                 "color": "#55baea"
               },
               {
                 "title": "React Server Components and Incremental Static Regeneration",
-                "description": "The site uses the Sanity.io CMS with ISR to provide an efficient publishing pipeline and an intuitive user experience. Posts are fetched from the Sanity content lake and published to the site using Next.js and React Server Components.",
+                "description": "I implemented React Server Components and Incremental Static Regeneration (ISR) in combination with Sanity.io CMS. This setup allows for fast page loads while still enabling dynamic content updates. It was a strategic choice to showcase our technical capabilities while ensuring an efficient content management process.",
                 "imageURL": "/v1725233705/think-jeremy-logan/ColorMillDesignBlog_q7kkt2.png",
                 "color": "#90F091"
               },
               {
                 "title": "TypeScript",
-                "description": "I use TypeScript whenever possible. It's a great language for building scalable applications and catching errors early.",
+                "description": "I built the entire project using TypeScript to ensure code quality and maintainability. This choice reflects our studio's commitment to creating robust, scalable solutions for our clients.",
                 "imageURL": "/v1725232685/think-jeremy-logan/TypeScript_ask8wu.png",
                 "color": "#F2545B"
               }
@@ -82,23 +82,23 @@
           "content": {
             "link": "https://pointarenalighthouse.com/",
             "imageURL": "/v1695678649/color-mill-design-2023/point-arena-lighthouse_zyjqwv.jpg",
-            "description": "After a full brand refresh, I designed and developed a new website for the Point Arena Lighthouse. The site was prototyped in Figma then built using Next.js, Typescript, and Tailwind CSS, with a fully customized content managment in Sanity.io. The site also features a custom integration with Innroad for booking and lodging, and Paypal for collecting donations.",
+            "description": "After completing a full brand refresh for the Point Arena Lighthouse, I took on the task of designing and developing their new website. I started by prototyping in Figma, ensuring the design captured the lighthouse's historic significance while providing modern functionality. I then built the site using Next.js, TypeScript, and Tailwind CSS. To meet the client's specific needs, I created a custom content management system with Sanity.io and integrated Innroad for booking and lodging, as well as PayPal for donations.",
           "features": [
             {
               "title": "Design System and Prototyping in Figma",
-              "description": "The site features a number of animated elements. Some, such as the logo were hand animated in After Effects and imported into the project. Others were created either procedurally with Framer-motion.",
+              "description": "I developed a comprehensive design system in Figma, which allowed for efficient iterations based on client feedback. This approach helped me establish a cohesive visual language for the site and set up a framework that could easily accommodate future expansions.",
               "imageURL": "/v1695678649/color-mill-design-2023/point-arena-lighthouse_zyjqwv.jpg",
               "color": "#55baea"
             },
             {
               "title": "Booking Engine API Integration",
-              "description": "The site uses the Sanity.io CMS with ISR to provide an efficient publishing pipeline and an intuitive user experience. Posts are fetched from the Sanity content lake and published to the site using Next.js and React Server Components.",
+              "description": "To streamline the reservation process, I integrated Innroad's booking engine API. This allows visitors to book lodging and tours directly through the website, enhancing the lighthouse's online booking capabilities and potentially increasing revenue.",
               "imageURL": "/v1725321949/think-jeremy-logan/PA-lodging_snlcae.png",
               "color": "#90F091"
             },
             {
               "title": "Custom CMS with Sanity.io",
-              "description": "I used Sanity.io to create a custom CMS for the Point Arena Lighthouse. The CMS allows the client to easily add and edit content to the site.",
+              "description": "Understanding that the lighthouse staff needed an easy way to manage content, I implemented a tailored CMS using Sanity.io. I designed the interface to be intuitive, allowing non-technical staff to update content, manage events, and control various aspects of the site without requiring extensive training.",
               "imageURL": "/v1695678649/color-mill-design-2023/point-arena-lighthouse_zyjqwv.jpg",
               "color": "#F2545B"
             }
@@ -112,7 +112,27 @@
           "content": {
             "link": "https://www.mendocinospirits.com/",
             "imageURL": "/v1642122802/color-mill-design-2023/MS-Home-Page_fjiah5.jpg",
-            "description": "My team and I started with a full brand strategy package for Mendocino Spirits, then designed and developed a new website for them. The site was built using Next.js, and Tailwind CSS, and integrates with a Shopify backend for online sales. I also designed all of the bottle labels for their spirits which you can see further down the page."
+            "description": "My work with Mendocino Spirits began with developing a full brand strategy package. From there, I designed and developed a new website that would showcase their artisanal spirits and facilitate online sales. I built the site using Next.js and Tailwind CSS, integrating with a Shopify backend for e-commerce functionality. As part of the branding process, I also designed the bottle labels for their spirits line, ensuring a cohesive brand experience across both digital and physical touchpoints.",
+          "features": [
+            {
+              "title": "Ecommerce Integration with Shopify",
+              "description": "To enable direct sales, I integrated Shopify into the website. This required careful planning of the user flow, inventory management, and secure payment processing. The result is a seamless shopping experience that allows customers to browse and purchase Mendocino Spirits products directly from the site.",
+              "imageURL": "/v1642122802/color-mill-design-2023/MS-Home-Page_fjiah5.jpg",
+              "color": "#55baea"
+            },
+            {
+              "title": "Built with Next.js. Hosted on Vercel.",
+              "description": "I chose to build the site with Next.js and host it on Vercel to ensure optimal performance and scalability. By leveraging server-side rendering and static site generation where appropriate, I was able to create a fast, responsive site with improved search engine visibility.",
+              "imageURL": "/v1680108504/color-mill-design-2023/Mendocino-Spirits-Landing-Image_kt9oby.png",
+              "color": "#90F091"
+            },
+            {
+              "title": "Handpainted Label Illustrations",
+              "description": "In addition to web development, I created handpainted label illustrations for Mendocino Spirits' product line. This allowed me to extend the brand identity into the physical product design. I then incorporated these illustrations into the website design, creating a cohesive visual experience across all brand touchpoints.",
+              "imageURL": "/v1645133028/color-mill-design-2023/4-Seasons_i5fakp.jpg",
+              "color": "#F2545B"
+            }
+          ]
           }
         },
         {
@@ -122,127 +142,27 @@
           "content": {
             "link": "https://www.rcscenter.org/",
             "imageURL": "/v1654540671/color-mill-design-2023/rcs_hr7vei.jpg",
-            "description": "My team and I started with a full brand strategy package then I went on to design and develop a new website for Redwood Coast Seniors. The site was prototyped in Figma and built using Next.js, and Tailwind CSS, integrating with the Sanity.io CMS and Paypal for donations. Also of note are several calendars on the site which integrate with the Redwood Coast Seniors Google calendar events through the Google Calendar API."
-          }
-        },
-        {
-          "id": "f",
-          "title": "Newberger & Associates",
-          "subtitle": "Web Design & Development",
-          "content": {
-            "link": "https://www.lsndesign.com/",
-            "imageURL": "/v1641948361/color-mill-design-2023/newberger_nhbtwl.jpg",
-            "description": "Designed in Figma then built using Next.js, Tailwind CSS, and cloudinary for image hosting."
-          }
-        }
-      ]
-    },
-{
-  "section": "ILLUSTRATION",
-  "projects": [
-    {
-      "id": "f",
-      "title": "Mendocino Spirits Bourbon",
-      "subtitle": "Brand Strategy, Label Design & Illustration",
-      "content": {
-        "link": "",
-        "imageURL": "/v1678900661/color-mill-design-2023/bourbon-web_oivqyn.jpg",
-        "description": "Over the years I've created a number of illustrations for Mendocino Spirits. The series started with this Bourbon label, and has since expanded to include a number of other spirits."
-      }
-    },
-    {
-      "id": "g",
-      "title": "Mendocino Spirits Spirit Whiskey",
-      "subtitle": "Brand Strategy, Label Design & Illustration",
-      "content": {
-        "link": "",
-        "imageURL": "/v1678900662/color-mill-design-2023/spirit-whiskey-web_ffjlh3.jpg",
-        "description": "Over the years I've created a number of illustrations for Mendocino Spirits."
-      }
-    },
-    {
-      "id": "h",
-      "title": "Mendocino Spirits Dry Gin",
-      "subtitle": "Brand Strategy, Label Design & Illustration",
-      "content": {
-        "link": "",
-        "imageURL": "/v1678900662/color-mill-design-2023/dry-gin-web_re9yf6.jpg",
-        "description": "Over the years I've created a number of illustrations for Mendocino Spirits."
-      }
-    },
-    {
-      "id": "i",
-      "title": "Mendocino Spirits Aged Gin",
-      "subtitle": "Brand Strategy, Label Design & Illustration",
-      "content": {
-        "link": "",
-        "imageURL": "/v1678899819/color-mill-design-2023/aged-gin-web_gzvw7f.jpg",
-        "description": "Over the years I've created a number of illustrations for Mendocino Spirits."
-      }
-    },
-    {
-      "id": "j",
-      "title": "Mendocino Spirits Rye Malt Whiskey",
-      "subtitle": "Brand Strategy, Label Design & Illustration",
-      "content": {
-        "link": "",
-        "imageURL": "/v1678900662/color-mill-design-2023/rye-malt-web_nrzhkn.jpg",
-        "description": "Over the years I've created a number of illustrations for Mendocino Spirits."
-      }
-    },
-    {
-      "id": "k",
-      "title": "Boonville Betty",
-      "subtitle": "Label Design & Illustration",
-      "content": {
-        "link": "",
-        "imageURL": "/v1641948871/color-mill-design-2023/Betty_Instagram_Not_transparent_bsqzvp.jpg",
-        "description": "I had a lot of fun with this pinup inspired illustration for a local chef who wanted to bring her famous hot sauces to market."
-      }
-    },
-    {
-      "id": "l",
-      "title": "Memento Mori",
-      "subtitle": "Illustration",
-      "content": {
-        "link": "",
-        "imageURL": "/v1642285573/color-mill-design-2023/Memento_Mori_nnzpzd.jpg",
-        "description": "Every year I create a new illustration for my company's calendar give away. This is the 2022 edition."
-      }
-    }
-  ]
-},
-    {
-      "section": "GRAPHIC DESIGN",
-      "projects": [
-        {
-          "id": "m",
-          "title": "Mendocino Spirits Bottles",
-          "subtitle": "Brand Strategy, Label Design & Illustration",
-          "content": {
-            "link": "",
-            "imageURL": "/v1638993398/color-mill-design-2023/4-Seasons_i5fakp.jpg",
-            "description": "Over the years I've created a number of illustrations for Mendocino Spirits."
-          }
-        },
-        {
-          "id": "n",
-          "title": "Logos",
-          "subtitle": "Graphic Design and Illustration",
-          "content": {
-            "link": "",
-            "imageURL": "/v1642446246/color-mill-design-2023/Logos_qf4ibd.jpg",
-            "description": "This is a selection of some of the logos I've done over the years."
-          }
-        },
-        {
-          "id": "o",
-          "title": "Noyo Harbor Inn",
-          "subtitle": "Brand Strategy, Graphic Design",
-          "content": {
-            "link": "",
-            "imageURL": "/v1643162096/color-mill-design-2023/NHI-Collateral_instagram_wmxuhl.jpg",
-            "description": "My team and I helped the Noyo Harbor in with a full brand refresh, including a new logo, and a number of collateral pieces."
+            "description": "For Redwood Coast Seniors, I began with a full brand strategy package before moving on to design and develop their new website. I prototyped the site in Figma, focusing on creating an accessible and user-friendly interface for seniors. I then built the site using Next.js and Tailwind CSS. To meet the organization's needs, I integrated Sanity.io CMS for content management, PayPal for donations, and the Google Calendar API for event management.",
+          "features": [
+            {
+              "title": "Prototyped in Figma",
+              "description": "I created detailed prototypes in Figma, paying special attention to accessibility and ease of use for the senior demographic. This process helped me refine the user interface and create a design system that could easily accommodate future site expansions.",
+              "imageURL": "/v1654540671/color-mill-design-2023/rcs_hr7vei.jpg",
+              "color": "#55baea"
+            },
+            {
+              "title": "Google Calendar API Integration",
+              "description": "To keep the community informed about events and activities, I implemented a calendar system using the Google Calendar API. This allows staff to manage events through their familiar Google Calendar interface while automatically updating the website, ensuring that event information is always current.",
+              "imageURL": "/v1678482351/color-mill-design-2023/RCS-Landing-Image_qtsxtd.png",
+              "color": "#90F091"
+            },
+            {
+              "title": "Sanity.io CMS",
+              "description": "I implemented a custom CMS using Sanity.io, designing it to be intuitive for non-technical staff. This system allows easy updates to website content, addition of new resources, and management of various sections of the site. My goal was to create a flexible, user-friendly backend that would support efficient content management for the Redwood Coast Seniors team.",
+              "imageURL": "/v1725312785/think-jeremy-logan/MFN-CMS_umgykv.gif",
+              "color": "#F2545B"
+            }
+          ]
           }
         }
       ]
