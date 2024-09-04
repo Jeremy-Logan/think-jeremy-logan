@@ -23,7 +23,7 @@ interface PortfolioCardProps {
                 color: string;
             }[];
         };
-    }; 
+    };
 }
 
 
@@ -40,6 +40,7 @@ const PortfolioCard = ({ project }: PortfolioCardProps) => {
     const [triggerAnimation, setTriggerAnimation] = useState(false);
     const [splashPosition, setSplashPosition] = useState({ x: 0, y: 0 });
     const animationPlayedRef = useRef(false);
+    const [isMobile, setIsMobile] = useState(false);
 
     const handleAnimationComplete = useCallback(() => {
         setTriggerAnimation(false);
@@ -51,6 +52,19 @@ const PortfolioCard = ({ project }: PortfolioCardProps) => {
             setSplashPosition({ x, y });
             setTriggerAnimation(true);
         }
+    }, []);
+
+    useEffect(() => {
+        const handleResize = () => {
+            setIsMobile(window.innerWidth < 1024); // Adjust the breakpoint as needed
+        };
+
+        handleResize(); // Set the initial screen size
+        window.addEventListener('resize', handleResize);
+
+        return () => {
+            window.removeEventListener('resize', handleResize);
+        };
     }, []);
 
     const TracingLine = useMemo(() => {
@@ -117,54 +131,54 @@ const PortfolioCard = ({ project }: PortfolioCardProps) => {
 
     const BlobbyBorder = useMemo(() => {
         const BlobbyBorderComponent = ({ id }: { id: string | number }) => (
-        <motion.svg
-            key={id}
-            className="absolute -inset-2 w-[calc(100%+16px)] h-[calc(100%+16px)] selected-feature"
-            xmlns="http://www.w3.org/2000/svg"
-        >
-            {Array.from({ length: 12 }).map((_, index) => (
-                <motion.rect
-                    key={index}
-                    x="8" y="8"
-                    rx="8" ry="8"
-                    width="calc(100% - 16px)" height="calc(100% - 16px)"
-                    fill="none"
-                    stroke="#3b82f6"
-                    strokeLinecap="round"
-                    initial={{
-                        opacity: 0,
-                        strokeWidth: 2,
-                        strokeDasharray: `${0.3 * (index + 1)} ${1.2 * (index + 1)}`,
-                    }}
-                    animate={{
-                        opacity: selectedFeature?.title === id ? 1 : 0.3,
-                        strokeDasharray: selectedFeature?.title === id
-                            ? [`${0.2 * (index + 1)} ${2.4 * (index + 1)}`, `${0.4 * (index + 1)} ${2.2 * (index + 1)}`]
-                            : `${0.3 * (index + 1)} ${1.2 * (index + 1)}`,
-                        strokeWidth: selectedFeature?.title === id
-                            ? [(index + 5) * 0.6, (index + 5) * 0.9, (index + 5) * 0.4]
-                            : 2,
-                    }}
-                    transition={{
-                        opacity: {
-                            duration: 0.75,
-                            ease: "easeOut",
-                        },
-                        strokeDasharray: {
-                            duration: selectedFeature?.title === id ? index * Math.floor(Math.random() * 5) : 0,
-                            ease: "easeInOut",
-                            repeat: selectedFeature?.title === id ? Infinity : 0,
-                            repeatType: "reverse",
-                        },
-                        strokeWidth: {
-                            duration: selectedFeature?.title === id ? index * 0.2 : 0,
-                            ease: "easeInOut",
-                            repeat: selectedFeature?.title === id ? Infinity : 0,
-                            repeatType: "reverse",
-                        },
-                    }}
-                />
-            ))}
+            <motion.svg
+                key={id}
+                className="absolute -inset-2 w-[calc(100%+16px)] h-[calc(100%+16px)] selected-feature"
+                xmlns="http://www.w3.org/2000/svg"
+            >
+                {Array.from({ length: 12 }).map((_, index) => (
+                    <motion.rect
+                        key={index}
+                        x="8" y="8"
+                        rx="8" ry="8"
+                        width="calc(100% - 16px)" height="calc(100% - 16px)"
+                        fill="none"
+                        stroke="#3b82f6"
+                        strokeLinecap="round"
+                        initial={{
+                            opacity: 0,
+                            strokeWidth: 2,
+                            strokeDasharray: `${0.3 * (index + 1)} ${1.2 * (index + 1)}`,
+                        }}
+                        animate={{
+                            opacity: selectedFeature?.title === id ? 1 : 0.3,
+                            strokeDasharray: selectedFeature?.title === id
+                                ? [`${0.2 * (index + 1)} ${2.4 * (index + 1)}`, `${0.4 * (index + 1)} ${2.2 * (index + 1)}`]
+                                : `${0.3 * (index + 1)} ${1.2 * (index + 1)}`,
+                            strokeWidth: selectedFeature?.title === id
+                                ? [(index + 5) * 0.6, (index + 5) * 0.9, (index + 5) * 0.4]
+                                : 2,
+                        }}
+                        transition={{
+                            opacity: {
+                                duration: 0.75,
+                                ease: "easeOut",
+                            },
+                            strokeDasharray: {
+                                duration: selectedFeature?.title === id ? index * Math.floor(Math.random() * 5) : 0,
+                                ease: "easeInOut",
+                                repeat: selectedFeature?.title === id ? Infinity : 0,
+                                repeatType: "reverse",
+                            },
+                            strokeWidth: {
+                                duration: selectedFeature?.title === id ? index * 0.2 : 0,
+                                ease: "easeInOut",
+                                repeat: selectedFeature?.title === id ? Infinity : 0,
+                                repeatType: "reverse",
+                            },
+                        }}
+                    />
+                ))}
             </motion.svg>
         );
         BlobbyBorderComponent.displayName = 'BlobbyBorder';
@@ -175,10 +189,10 @@ const PortfolioCard = ({ project }: PortfolioCardProps) => {
         <div className="relative">
             <div className="relative mx-auto max-w-2xl px-4 py-16 sm:px-6 sm:py-20 lg:grid lg:max-w-7xl lg:grid-cols-2 lg:gap-x-8 lg:px-8">
                 {/* Project details */}
-                <div className="lg:max-w-lg lg:self-end">
+                <div className="max-w-3xl col-span-2 lg:self-end">
 
-                    <div className="mt-4">
-                        <h1 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">{title}</h1>
+                    <div>
+                        <h1 className="text-3xl font-serif font-bold tracking-tight text-white sm:text-4xl">{title}</h1>
                     </div>
 
                     <section aria-labelledby="information-heading" className="mt-4">
@@ -189,7 +203,7 @@ const PortfolioCard = ({ project }: PortfolioCardProps) => {
                         <div className="flex items-center">
                             <p className="text-md uppercase text-white sm:text-md">{subtitle}</p>
 
-                            
+
                         </div>
 
                         <div className="mt-4 space-y-6">
@@ -204,10 +218,10 @@ const PortfolioCard = ({ project }: PortfolioCardProps) => {
                         <h2 id="options-heading" className="sr-only">
                             Project Features
                         </h2>
-                            <div className="sm:flex sm:justify-between">
-                                {/* Feature selector */}
-                                <fieldset>
-                                    <legend className="block text-lg uppercase mb-4 font-medium text-white">Features</legend>
+                        <div className="sm:flex sm:justify-between">
+                            {/* Feature selector */}
+                            <fieldset>
+                                <legend className="text-lg uppercase mb-4 font-medium text-white">Features</legend>
                                 <RadioGroup
                                     value={selectedFeature}
                                     onChange={(feature) => {
@@ -221,19 +235,52 @@ const PortfolioCard = ({ project }: PortfolioCardProps) => {
                                         <AnimatePresence key={feature.title}>
                                             <Radio
                                                 value={feature}
-                                                style={{ borderColor: selectedFeature === feature ? feature.color : 'gray',
+                                                style={{
+                                                    borderColor: selectedFeature === feature ? feature.color : 'gray',
                                                     borderWidth: selectedFeature === feature ? '8px' : '2px',
                                                     boxShadow: selectedFeature === feature ? `0px 0px 15px 5px ${feature.color}` : 'none'
-                                                    }}
+                                                }}
                                                 className={classNames(
-                                                    `group relative block border cursor-pointer mb-2 rounded-lg p-4 transition-all duration-500 focus:outline-none overflow-hidden`
+                                                    `group relative block border cursor-pointer mb-2 rounded-lg p-6 transition-all duration-500 focus:outline-none overflow-hidden`
                                                 )}
                                                 data-feature={feature.title}
                                             >
                                                 {/* <AnimatePresence>
                                                     {selectedFeature === feature && <BlobbyBorder id={feature.title} />}
                                                 </AnimatePresence> */}
+
                                                 <div className="relative z-10">
+                                                    {isMobile &&selectedFeature === feature && (
+                                                        <div className="lg:hidden aspect-h-1 aspect-w-1 rounded-lg project-image relative mb-4 overflow-hidden origin-bottom">
+                                                        <motion.div
+                                                            initial={{ height: 0, opacity: 0 }}
+                                                            animate={{
+                                                                height: selectedFeature === feature ? "auto" : 0,
+                                                                opacity: selectedFeature === feature ? 1 : 0
+                                                            }}
+                                                            transition={{ duration: 0.3, ease: "easeInOut" }}
+                                                            className="absolute inset-0 rounded-xl origin-bottom"
+                                                        >
+                                                            <motion.div
+                                                                initial={{ height: 0, opacity: 0 }}
+                                                                animate={{
+                                                                    height: selectedFeature === feature ? "auto" : 0,
+                                                                    opacity: selectedFeature === feature ? 1 : 0
+                                                                }}
+                                                                transition={{ duration: 0.3, ease: "easeInOut" }}
+                                                                style={{ backgroundColor: feature.color, overflow: "hidden" }}
+                                                                className="absolute inset-0 rounded-xl overflow-hidden " />
+                                                            <Image
+                                                                src={getCloudinaryImageUrl(`${feature.imageURL}`)}
+                                                                alt={feature.title}
+                                                                fill={true}
+                                                                style={{ objectFit: "cover", scale: '98%', borderRadius: '10px' }}
+                                                                sizes="(max-width: 768px) 45vw,"
+                                                            />
+                                                        </motion.div>
+
+
+                                                    </div>)}
                                                     <p className="text-base font-medium text-white">{feature.title}</p>
                                                     <motion.div
                                                         initial={{ height: 0, opacity: 0 }}
@@ -244,19 +291,19 @@ const PortfolioCard = ({ project }: PortfolioCardProps) => {
                                                         transition={{ duration: 0.3, ease: "easeInOut" }}
                                                         style={{ overflow: "hidden" }}
                                                     >
-                                                        <p className="mt-1 text-sm text-white leading-relaxed whitespace-pre-line">{feature.description}</p>
+                                                        <p className="mt-3 text-sm text-white leading-relaxed whitespace-pre-line">{feature.description}</p>
                                                     </motion.div>
                                                 </div>
                                             </Radio>
                                         </AnimatePresence>
                                     ))}
                                 </RadioGroup>
-                                </fieldset>
-                            </div>
-                        
+                            </fieldset>
+                        </div>
+
                     </section>
                 </div>
-                <div className="hidden lg:block lg:col-start-2 lg:row-span-2 lg:mt-0 lg:self-center">
+                <div className="hidden lg:block lg:col-start-2 lg:row-span-2 lg:self-center ">
                     <div className="aspect-h-1 aspect-w-1 rounded-lg project-image relative">
                         <AnimatePresence>
                             {content.features?.map((feature) => (
@@ -264,13 +311,13 @@ const PortfolioCard = ({ project }: PortfolioCardProps) => {
                                     <motion.div
                                         key={feature.title}
                                         data-feature={feature.title}
-                                        initial={{ opacity: 0}}
-                                        animate={{ opacity: 1}}
-                                        exit={{ opacity: 0.75}}
+                                        initial={{ opacity: 0 }}
+                                        animate={{ opacity: 1 }}
+                                        exit={{ opacity: 0.75 }}
                                         transition={{ duration: 0.3, delay: 0.3, ease: "easeOut" }}
                                         className="absolute inset-0 rounded-xl"
                                     >
-                                        <motion.div 
+                                        <motion.div
                                             initial={{ opacity: 0, scale: 0.95 }}
                                             animate={{ opacity: 1, scale: 1 }}
                                             exit={{ opacity: 0, scale: 0.95 }}
@@ -284,7 +331,7 @@ const PortfolioCard = ({ project }: PortfolioCardProps) => {
                                             style={{ objectFit: "cover", scale: '98%', borderRadius: '10px' }}
                                             sizes="(max-width: 768px) 45vw,"
                                         />
-                                        
+
                                         {/* <BlobbyBorder id={feature.title} /> */}
                                     </motion.div>
                                 )
@@ -293,29 +340,29 @@ const PortfolioCard = ({ project }: PortfolioCardProps) => {
                     </div>
                 </div>
                 <div className='hidden lg:block absolute inset-0'>
-                <AnimatePresence>
-                    {selectedFeature && (
-                        <TracingLine
-                            key={selectedFeature.title}
-                            isVisible={true}
-                            selectedFeature={selectedFeature}
-                            onLineComplete={handleLineComplete}
-                        />
-                    )}
-                </AnimatePresence>
-                <SplashAnimation
-                    triggerAnimation={triggerAnimation}
-                    onAnimationComplete={handleAnimationComplete}
-                    color={selectedFeature?.color}
-                    style={{
-                        position: 'absolute',
-                        left: `${splashPosition.x - 35}px`,
-                        top: `${splashPosition.y}px`,
-                        transform: 'translate(-50%, -50%)',
-                        zIndex: 20
-                    }}
+                    <AnimatePresence>
+                        {selectedFeature && (
+                            <TracingLine
+                                key={selectedFeature.title}
+                                isVisible={true}
+                                selectedFeature={selectedFeature}
+                                onLineComplete={handleLineComplete}
+                            />
+                        )}
+                    </AnimatePresence>
+                    <SplashAnimation
+                        triggerAnimation={triggerAnimation}
+                        onAnimationComplete={handleAnimationComplete}
+                        color={selectedFeature?.color}
+                        style={{
+                            position: 'absolute',
+                            left: `${splashPosition.x - 35}px`,
+                            top: `${splashPosition.y}px`,
+                            transform: 'translate(-50%, -50%)',
+                            zIndex: 20
+                        }}
                     />
-                    </div>
+                </div>
             </div>
         </div>
     )
