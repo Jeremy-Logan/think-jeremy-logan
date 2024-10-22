@@ -79,6 +79,15 @@ export default function Seo(props: SeoProps) {
         content='/favicon/ms-icon-144x144.png'
       />
       <meta name='theme-color' content='#ffffff' />
+      <link rel="preload" href="/images/splash-anim/splash-anim0001.svg" as="image"></link>
+      <link rel="preload" href="/images/splash-anim/splash-anim0002.svg" as="image"></link>
+      <link rel="preload" href="/images/splash-anim/splash-anim0003.svg" as="image"></link>
+      <link rel="preload" href="/images/splash-anim/splash-anim0004.svg" as="image"></link>
+      <link rel="preload" href="/images/splash-anim/splash-anim0005.svg" as="image"></link>
+      <link rel="preload" href="/images/splash-anim/splash-anim0006.svg" as="image"></link>
+      <link rel="preload" href="/images/splash-anim/splash-anim0007.svg" as="image"></link>
+      <link rel="preload" href="/images/splash-anim/splash-anim0008.svg" as="image"></link>
+      <link rel="preload" href="/images/splash-anim/splash-anim0009.svg" as="image"></link>
     </Head>
   );
 }
