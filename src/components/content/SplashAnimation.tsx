@@ -13,53 +13,65 @@ interface SplashAnimationProps {
 const SplashAnimation = ({ triggerAnimation, onAnimationComplete, style, color }: SplashAnimationProps) => {
     const [currentFrame, setCurrentFrame] = useState(0);
     const [isPlaying, setIsPlaying] = useState(false);
+    const [isVisible, setIsVisible] = useState(false);
 
     useEffect(() => {
         if (triggerAnimation && !isPlaying) {
             setCurrentFrame(0);
             setIsPlaying(true);
+            setIsVisible(true);
         }
     }, [triggerAnimation, isPlaying]);
 
     useEffect(() => {
-        let intervalId: NodeJS.Timer | undefined;
-
+        let animationFrameId: number;
+        let lastFrameTime = 0;
+        const frameDuration = 60; // Adjust this value to control animation speed
+    
+        const animate = (timestamp: number) => {
+            if (isPlaying) {
+                if (timestamp - lastFrameTime >= frameDuration) {
+                    setCurrentFrame((prevFrame) => {
+                        if (prevFrame + 1 >= frames.length) {
+                            setIsPlaying(false);
+                            setIsVisible(false);
+                            onAnimationComplete();
+                            return 0;
+                        }
+                        return prevFrame + 1;
+                    });
+                    lastFrameTime = timestamp;
+                }
+                animationFrameId = requestAnimationFrame(animate);
+            }
+        };
+    
         if (isPlaying) {
-            intervalId = setInterval(() => {
-                setCurrentFrame((prevFrame) => {
-                    if (prevFrame + 1 >= frames.length) {
-                        setIsPlaying(false);
-                        onAnimationComplete();
-                        return 0;
-                    }
-                    return prevFrame + 1;
-                });
-            }, 45); // Adjust this value to control animation speed
+            animationFrameId = requestAnimationFrame(animate);
         }
-
+    
         return () => {
-            if (intervalId) {
-                clearInterval(intervalId);
+            if (animationFrameId) {
+                cancelAnimationFrame(animationFrameId);
             }
         };
     }, [isPlaying, onAnimationComplete]);
 
-    if (!isPlaying) {
-        return null;
-    }
 
     return (
         <div style={style}>
-            <SVG 
-                src={frames[currentFrame] || ''} 
-                height={200} 
-                width={300} 
-                preProcessor={(code) => {
-                    code = code.replace(/fill=".*?"/g, `fill="${color || '#55baea'}"`);
-                    code = code.replace(/stroke=".*?"/g, `stroke="${color || '#55baea'}"`);
-                    return code;
-                }}
-            />
+            {isVisible && (
+                <SVG 
+                    src={frames[currentFrame] || ''} 
+                    height={200} 
+                    width={300} 
+                    preProcessor={(code) => {
+                        code = code.replace(/fill=".*?"/g, `fill="${color || '#55baea'}"`);
+                        code = code.replace(/stroke=".*?"/g, `stroke="${color || '#55baea'}"`);
+                        return code;
+                    }}
+                />
+            )}
         </div>
     );
 }

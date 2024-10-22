@@ -241,7 +241,7 @@ const PortfolioCard = ({ project }: PortfolioCardProps) => {
                                                     boxShadow: selectedFeature === feature ? `0px 0px 15px 5px ${feature.color}` : 'none'
                                                 }}
                                                 className={classNames(
-                                                    `group relative block border cursor-pointer mb-2 rounded-lg p-6 transition-all duration-500 focus:outline-none overflow-hidden`
+                                                    `group relative block border cursor-pointer mb-2 rounded-lg transition-all duration-500 focus:outline-none overflow-hidden`
                                                 )}
                                                 data-feature={feature.title}
                                             >
@@ -249,7 +249,7 @@ const PortfolioCard = ({ project }: PortfolioCardProps) => {
                                                     {selectedFeature === feature && <BlobbyBorder id={feature.title} />}
                                                 </AnimatePresence> */}
 
-                                                <div className="relative z-10">
+                                                <div className="relative z-10 p-6">
                                                     {isMobile &&selectedFeature === feature && (
                                                         <div className="lg:hidden aspect-h-1 aspect-w-1 rounded-lg project-image relative mb-4 overflow-hidden origin-bottom">
                                                         <motion.div
