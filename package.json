@@ -16,7 +16,7 @@
     "clsx": "^1.2.1",
     "framer-motion": "^10.3.2",
     "lodash": "^4.17.21",
-    "next": "^14.2.5",
+    "next": "14.2.35",
     "next-cloudinary": "^6.11.0",
     "popmotion": "^11.0.5",
     "react": "18.2.0",
